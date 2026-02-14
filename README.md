@@ -1,20 +1,45 @@
 # Tolfin
 
-CSS-тема для Jellyfin.
+Modern CSS theme for Jellyfin media server with custom fonts, smooth animations and responsive design.
 
-## Установка
+## Installation
 
-1. Скачайте `theme/base.css`
-2. Добавьте его в настройки Jellyfin: Dashboard → General → Custom CSS
-3. Вставьте содержимое файла
+### Method 1: Via CDN URL (Recommended)
 
-## Особенности
+1. Go to Jellyfin Dashboard → General → Custom CSS
+2. Paste this URL:
+   ```
+   https://cdn.jsdelivr.net/gh/OlegTolchin/Tolfin@latest/theme/base.css
+   ```
+3. Click Save
 
-- Модернизированный дизайн
-- Кастомные шрифты
-- Плавные анимации
-- Адаптивность
+### Method 2: Manual
 
-## Лицензия
+1. Download `theme/base.css` from this repository
+2. Go to Jellyfin Dashboard → General → Custom CSS
+3. Paste the contents of the file
+4. Click Save
+
+## Features
+
+- 🎨 Modern design with improved aesthetics
+- 🔤 Custom fonts for better readability
+- ✨ Smooth animations and transitions
+- 📱 Fully responsive layout
+- 🎯 Optimized for desktop and mobile viewing
+
+## Manifest
+
+This theme includes a `manifest.json` for automatic installation via theme repositories and plugins.
+
+## Repository
+
+https://github.com/OlegTolchin/Tolfin
+
+## Author
+
+OlegTolchin
+
+## License
 
 MIT

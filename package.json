@@ -1,7 +1,14 @@
 {
-  "name": "jamfin",
+  "name": "tolfin",
   "version": "1.0.0",
+  "description": "Modern CSS theme for Jellyfin media server",
+  "author": "OlegTolchin",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OlegTolchin/Tolfin.git"
+  },
+  "homepage": "https://github.com/OlegTolchin/Tolfin#readme",
   "scripts": {
     "semantic-release": "semantic-release"
   },
