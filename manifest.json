@@ -1,0 +1,10 @@
+{
+  "name": "Tolfin",
+  "description": "Modern CSS theme for Jellyfin with custom fonts, smooth animations and responsive design",
+  "version": "1.0.0",
+  "author": "OlegTolchin",
+  "repository": "https://github.com/OlegTolchin/Tolfin",
+  "url": "https://cdn.jsdelivr.net/gh/OlegTolchin/Tolfin@latest/theme/base.css",
+  "target": "jellyfin",
+  "categories": ["theme", "css"]
+}
