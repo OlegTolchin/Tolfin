@@ -7,9 +7,9 @@ Modern CSS theme for Jellyfin media server with custom fonts, smooth animations 
 ### Method 1: Via CDN URL (Recommended)
 
 1. Go to Jellyfin Dashboard → General → Custom CSS
-2. Paste this URL:
-   ```
-   https://cdn.jsdelivr.net/gh/OlegTolchin/Tolfin@latest/theme/darkvar.css
+2. Paste this code:
+   ```css
+   @import url("https://cdn.jsdelivr.net/gh/OlegTolchin/Tolfin@latest/theme/darkvar.css");
    ```
 3. Click Save
 
