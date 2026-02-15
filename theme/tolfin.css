@@ -997,28 +997,6 @@ progress {
     padding-top: 15px !important;
 }
 
-/* ========================================
-   МОДУЛЬ: КАСТОМНЫЙ ЛОГОТИП
-   ======================================== */
-
-/* Главная страница — БАННЕР */
-html [class*="pageTitle"]:not([class*="item"]),
-body:not(.splashScreen) [class*="logo"] {
-    background-image: var(--banner-url) !important;
-    background-size: contain !important;
-    background-position: left center !important;
-    background-repeat: no-repeat !important;
-    min-height: 50px !important;
-}
-
-/* Экран загрузки — ЛОГО */
-html .splashScreen [class*="logo"],
-html body.splashScreen div {
-    background-size: contain !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-    min-height: 100px !important;
-}
 
 /* ========================================
    МОДУЛЬ: ИНДИКАТОРЫ СЧЁТЧИКОВ
