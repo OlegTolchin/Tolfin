@@ -616,16 +616,12 @@ progress {
 }
 
 /* Кастомный баннер для фона */
-.homeBackdropContainer,
-.backgroundContainer.withBackdrop,
-.itemBackdrop,
-.backdropImage,
-#indexPage .backgroundContainer,
-#indexPage .backdropImage {
+.homeBackdropContainer:not(.pageTitleWithDefaultLogo),
+.backgroundContainer.withBackdrop:not(.pageTitleWithDefaultLogo),
+.itemBackdrop:not(.pageTitleWithDefaultLogo) {
     background-image: var(--banner-url) !important;
     background-size: cover !important;
     background-position: center !important;
-    background-repeat: no-repeat !important;
 }
 
 /* Убрать градиентный оверлей на главной странице */
