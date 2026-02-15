@@ -1,31 +1,38 @@
 
+/* ========================================
+   ПЕРЕМЕННЫЕ ТЕМЫ
+   ======================================== */
 :root {
-    /* Colours */
-    --theme-background-colour: #101010;
-    --theme-sidebar-background-colour: #222222;
-    --theme-menu-background-colour: #3a3a3a80;
-    --theme-menu-shadow-colour: #fff3;
-    --theme-base-colour: #696969;
-    --theme-text-colour: #dbdbdb;
-    --theme-restart-colour: #da87287e;
-    --theme-shutdown-colour: #c21c1c9d;
-    --theme-progress-bar-colour: #cfcfcf;
-    --theme-progress-bar-background-colour: #2c2c2c;
-    --theme-progress-bar-transcoding-colour: #eb7e25;
-    --theme-chapter-marker-colour: #dbdbdb;
-    --theme-chapter-marker-watched-colour: #4a4a4a;
+    /* Цветовая палитра */
+    --theme-background-colour: #101010;                    /* Основной цвет фона */
+    --theme-sidebar-background-colour: #222222;           /* Цвет фона боковой панели */
+    --theme-menu-background-colour: #3a3a3a80;            /* Полупрозрачный цвет фона меню */
+    --theme-menu-shadow-colour: #fff3;                     /* Цвет тени/подсветки элементов меню */
+    --theme-base-colour: #696969;                          /* Базовый акцентный цвет */
+    --theme-text-colour: #dbdbdb;                          /* Цвет текста */
+    --theme-restart-colour: #da87287e;                     /* Цвет кнопки перезапуска (оранжевый) */
+    --theme-shutdown-colour: #c21c1c9d;                    /* Цвет кнопки выключения (красный) */
+    --theme-progress-bar-colour: #cfcfcf;                  /* Цвет прогресс-бара */
+    --theme-progress-bar-background-colour: #2c2c2c;       /* Фоновый цвет прогресс-бара */
+    --theme-progress-bar-transcoding-colour: #eb7e25;      /* Цвет прогресса транскодирования */
+    --theme-chapter-marker-colour: #dbdbdb;                /* Цвет маркера главы */
+    --theme-chapter-marker-watched-colour: #4a4a4a;        /* Цвет просмотренного маркера главы */
 
-    /* General Appearance */
-    --theme-roundness: .75rem;
-    --theme-blur: 16px;
+    /* Общие параметры внешнего вида */
+    --theme-roundness: .75rem;                             /* Скругление углов */
+    --theme-blur: 16px;                                    /* Сила размытия фона */
 }
 
-/* Remove the Default Focus Outline */
+/* ========================================
+   ОБЩИЕ СТИЛИ
+   ======================================== */
+
+/* Удаление стандартного контура при фокусе */
 *:focus-visible {
     outline: none;
 }
 
-/* Change Background Colours */
+/* Изменение цвета фона основных элементов */
 .backgroundContainer,
 .mainDrawer,
 .drawer-open,
@@ -35,52 +42,65 @@ html {
     background-color: var(--theme-background-colour);
 }
 
-/* Re-design the Header */
+/* ========================================
+   ХЕДЕР (ВЕРХНЯЯ ПАНЕЛЬ)
+   ======================================== */
 
+/* Стилизация заголовка страницы */
 .layout-desktop [dir="ltr"] .pageTitle {
     margin-left: 1.2em;
 }
 
+/* Стилизация заголовка боковой панели */
 [dir="ltr"] .sidebarHeader {
     padding-left: 2em;
     font-weight: bold;
 }
 
+/* Пункты навигационного меню */
 [dir="ltr"] .navMenuOption {
     padding: .9em 1.2em !important;
 }
 
+/* Высота заголовка с логотипом */
 .pageTitleWithLogo {
     height: 50px;
 }
 
+/* Прозрачный хедер */
 .skinHeader {
     background-color: transparent;
 }
 
+/* Отступы элементов хедера на десктопе */
 .layout-desktop .headerLeft,
 .layout-desktop .headerRight {
     margin-top: 1rem;
 }
 
+/* Отступы элементов хедера на мобильных устройствах */
 .layout-mobile .headerRight {
     margin: 0 .29em;
 }
 
+/* Отступы на странице библиотеки для мобильных */
 .layout-mobile .libraryPage:not(.noSecondaryNavPage) {
     padding-top: 8.5em !important;
 }
 
+/* Иконки в кнопках */
 .paper-icon-button-light > div {
     width: 25px;
     height: 25px;
     transform: unset;
 }
 
+/* Полупрозрачный хедер */
 .skinHeader.semiTransparent {
     background-color: unset;
 }
 
+/* Стилизация вкладок, кнопок и диалоговых окон с размытием фона */
 .headerTabs,
 .headerRight,
 .dialog,
@@ -114,15 +134,18 @@ html {
     -ms-backdrop-filter: blur(var(--theme-blur)) !important;
 }
 
+/* Фон диалогового окна */
 .dialogBackdrop {
     background-color: #111;
 }
 
+/* Слайдер вкладок */
 .headerTabs .emby-tabs-slider {
     display: flex;
     align-items: center;
 }
 
+/* Кнопки и элементы в хедере */
 .headerTabs .emby-tab-button,
 .headerRight .paper-icon-button-light,
 .detailButton,
@@ -134,6 +157,7 @@ html {
     border-radius: var(--theme-roundness);
 }
 
+/* Высота хедера на десктопе */
 .layout-desktop .headerTabs,
 .layout-desktop .headerLeft,
 .layout-desktop .headerRight,
@@ -142,6 +166,7 @@ html {
     height: 50px;
 }
 
+/* Высота хедера на мобильных */
 .layout-mobile .headerTabs,
 .layout-mobile .headerRight,
 .layout-mobile .emby-tabs-slider,
@@ -149,10 +174,12 @@ html {
     height: 40px;
 }
 
+/* Отступ вкладок на десктопе */
 .layout-desktop .headerTabs {
     margin-left: 250px;
 }
 
+/* Медиа-запросы для адаптивности хедера */
 @media (max-width: 1599px) {
     .layout-desktop .sectionTabs {
         width: auto;
@@ -174,6 +201,7 @@ html {
     }
 }
 
+/* Секция вкладок для TV */
 .layout-tv .sectionTabs {
     width: unset;
 }
@@ -202,21 +230,27 @@ html {
     }
 }
 
-/* Main Drawer */
+/* ========================================
+   БОКОВАЯ ПАНЕЛЬ (SIDEBAR)
+   ======================================== */
 
+/* Отключение анимации перехода на десктопе */
 .layout-desktop,
 .touch-menu-la.transition {
     transition: none;
 }
 
+/* Отступ боковой панели на мобильных */
 .layout-mobile .mainDrawer {
     padding-top: 1.2em;
 }
 
+/* Отступ контента боковой панели на десктопе */
 .layout-desktop .mainDrawer-scrollContainer {
     margin-top: 100px;
 }
 
+/* Пункты меню навигации - скругление и ширина */
 .navMenuOption,
 .navMenuOption-selected,
 .navMenuOption:hover,
@@ -227,28 +261,35 @@ html {
     margin: auto !important;
 }
 
+/* Подсветка при наведении на пункты меню */
 .navMenuOption:hover,
 .listItem:hover,
 .MuiButton-root:hover {
     background-color: var(--theme-menu-shadow-colour);
 }
 
+/* Выбранный пункт меню */
 .navMenuOption-selected,
 .Mui-selected {
     background: var(--theme-menu-shadow-colour) !important;
 }
 
-/* Main Cards */
+/* ========================================
+   КАРТОЧКИ КОНТЕНТА
+   ======================================== */
 
+/* Отступ заголовка секции */
 .section0 .sectionTitle {
     padding-top: 1em !important;
 }
 
+/* Кнопки прокрутки в секциях */
 .layout-desktop .section0 .emby-scrollbuttons,
 .layout-desktop .section1 .emby-scrollbuttons {
     padding-top: unset;
 }
 
+/* Карточки контента - скругление, тень, анимация */
 .cardContent:not(.dashboardSection .cardContent),
 .cardPadder:not(.dashboardSection .cardPadder),
 .blurhash-canvas,
@@ -259,12 +300,14 @@ html {
     transition: 0.2s;
 }
 
+/* Оверлей на карточках */
 .cardOverlayContainer {
     border-radius: var(--theme-roundness) !important;
     box-shadow: inset 0 2px var(--theme-menu-shadow-colour) !important;
     transition: unset;
 }
 
+/* Кнопки оверлея на мобильных */
 .layout-mobile .cardOverlayButton {
     padding: unset;
     margin: 5px;
@@ -274,11 +317,13 @@ html {
     background: unset !important;
 }
 
+/* Кнопки оверлея на десктопе */
 .layout-desktop .cardOverlayContainer > .cardOverlayButton-br .cardOverlayButton {
     padding: unset;
     margin: 5px;
 }
 
+/* Фон карточек по умолчанию */
 .defaultCardBackground1,
 .defaultCardBackground2,
 .defaultCardBackground3,
@@ -289,6 +334,7 @@ html {
     font-size: 110%;
 }
 
+/* Стилизация кнопок при наведении и фокусе */
 .button-submit:focus,
 .paper-icon-button-light:hover:not(:disabled, .btnDelete),
 .raised:hover,
@@ -310,12 +356,16 @@ html {
     background-color: var(--theme-menu-shadow-colour) !important;
 }
 
+/* Кнопки на TV при фокусе */
 .layout-tv .itemDetailsGroup .emby-button.show-focus:focus {
     padding: 5px 10px;
 }
 
-/* User Settings */
+/* ========================================
+   НАСТРОЙКИ ПОЛЬЗОВАТЕЛЯ
+   ======================================== */
 
+/* Жирные заголовки */
 .readOnlyContent h2,
 .sectionTitle,
 .dashboardSection h3,
@@ -323,15 +373,18 @@ html {
     font-weight: bold;
 }
 
+/* Убрать границы */
 .listItem-border,
 .itemSelectionPanel {
     border: unset;
 }
 
+/* Отступы элементов списка */
 .listItem {
     padding-left: 1.2em !important;
 }
 
+/* Скругление элементов при наведении */
 .listItem:hover,
 .MuiButtonBase-root,
 .MuiButtonBase-root:hover,
@@ -340,6 +393,7 @@ progress {
     border-radius: var(--theme-roundness);
 }
 
+/* Формы и поля ввода */
 .collapseContent,
 .formDialogFooter:not(.formDialogFooter-clear),
 .formDialogHeader:not(.formDialogHeader-clear),
@@ -355,16 +409,21 @@ progress {
     padding: 10px;
 }
 
+/* Отключенный селект */
 .emby-select[disabled] {
     box-shadow: unset;
 }
 
+/* Выбор дорожек */
 .trackSelections .selectContainer .detailTrackSelect {
     padding: 0 10px;
 }
 
-/* Content Details */
+/* ========================================
+   СТРАНИЦА ДЕТАЛЕЙ КОНТЕНТА
+   ======================================== */
 
+/* Изображение контента на десктопе */
 .layout-desktop .detailImageContainer .card {
     width: 250px;
     max-width: unset;
@@ -372,29 +431,33 @@ progress {
     left: 0;
 }
 
-/* Backwards Compatibility for versions before 10.11.0 */
+/* Обратная совместимость с версиями до 10.11.0 */
 .layout-desktop .infoWrapper .detailImageContainer .card {
     padding-top: 8.5em;
 }
 
+/* Основной контент страницы деталей */
 .layout-desktop .detailPagePrimaryContent {
     padding-top: 135px;
     padding-left: 300px;
     min-height: 325px;
 }
 
+/* Кнопки действий на странице деталей (десктоп) */
 .layout-desktop .mainDetailButtons {
     margin-top: 350px;
     margin-left: 292px;
     position: absolute;
 }
 
+/* Кнопки действий на странице деталей (мобильные) */
 .layout-mobile .mainDetailButtons {
     display: flex;
     flex-flow: wrap;
     gap: 10px;
 }
 
+/* Стилизация кнопок действий */
 .mainDetailButtons .detailButton {
     display: inline-flex;
     align-items: center;
@@ -402,6 +465,7 @@ progress {
     position: relative;
 }
 
+/* Текстовые метки для кнопок */
 .btnPlay .detailButton-content:before {
     content: "Play";
 }
@@ -450,54 +514,63 @@ progress {
     content: "Options";
 }
 
+/* Позиционирование текста кнопок */
 .detailButton-content:before {
     position: relative;
     margin-left: 30px;
 }
 
+/* Позиционирование иконок кнопок */
 .detailButton-icon:before {
     position: absolute;
     top: 7px;
     left: 7px;
 }
 
+/* Иконки Material Icons */
 .mainDetailButtons .material-icons {
     height: unset;
 }
 
+/* Отступы контента страницы деталей */
 .layout-desktop .detailPagePrimaryContainer,
 .layout-desktop .detailPageContent {
     padding-left: 3.3% !important;
 }
 
+/* Лента деталей */
 .detailRibbon {
     background: unset;
     padding-left: 0 !important;
 }
 
+/* Обёртка информации о контенте */
 .layout-desktop .infoWrapper {
     padding-top: 226px;
     padding-left: 300px;
 }
 
+/* Градиентный оверлей на фоне контента */
 .itemBackdrop::before {
     content: '';
     position: absolute;
-    top: 0;        /* cover the full element */
+    top: 0;        /* Покрывает весь элемент */
     left: 0;
     right: 0;
     bottom: 0;
     background: linear-gradient(180deg, transparent 5%, var(--theme-background-colour));
-    pointer-events: none; /* ensures it's non-interactive */
-    z-index: 1; /* sits on top of the image */
+    pointer-events: none; /* Не интерактивный элемент */
+    z-index: 1; /* Поверх изображения */
 }
 
+/* Фон контента на мобильных с анимацией */
 .layout-mobile .itemBackdrop {
     margin-top: unset;
     -webkit-animation: backdrop-fadein .8s ease-in normal both;
     animation: backdrop-fadein .8s ease-in normal both;
 }
 
+/* Изображение контента на мобильных */
 .layout-mobile .detailImageContainer .card {
     filter: unset;
     -webkit-filter: unset;
@@ -507,12 +580,14 @@ progress {
     padding-left: 2em;
 }
 
+/* Логотип контента на десктопе */
 .layout-desktop .detailLogo {
     left: 3%;
     right: unset;
     z-index: 1;
 }
 
+/* Убрать фон у элементов Material UI */
 .layout-desktop .backgroundContainer.withBackdrop,
 .MuiPaper-root,
 .MuiTabs-indicator {
@@ -521,6 +596,7 @@ progress {
     box-shadow: unset;
 }
 
+/* Размытие фонового изображения */
 .layout-desktop .backdropImage {
     filter: blur(5px);
     -webkit-filter: blur(5px);
@@ -529,6 +605,7 @@ progress {
     -ms-filter: blur(5px);
 }
 
+/* Затемнение контента */
 .darkenContent {
     backdrop-filter: blur(5px) brightness(0.75);
     -webkit-backdrop-filter: blur(5px) brightness(0.75);
@@ -542,16 +619,21 @@ progress {
     background: linear-gradient(180deg, transparent, var(--theme-background-colour));
 }
 
+/* Контейнер элементов для TV */
 .itemsContainer-tv {
     margin-left: 10px;
 }
 
-/* Admin Settings */
+/* ========================================
+   НАСТРОЙКИ АДМИНИСТРАТОРА
+   ======================================== */
 
+/* Кнопка перезапуска сервера */
 #btnRestartServer {
     box-shadow: inset 0 1px var(--theme-restart-colour) !important;
 }
 
+/* Кнопка перезапуска при наведении и уведомления */
 #btnRestartServer:hover,
 .notifications,
 .MuiChip-filledInfo {
@@ -559,11 +641,13 @@ progress {
     background-color: var(--theme-restart-colour) !important;
 }
 
+/* Кнопка выключения и удаления */
 #btnShutdown,
 .btnDelete {
     box-shadow: inset 0 1px var(--theme-shutdown-colour) !important;
 }
 
+/* Кнопка выключения при наведении и важные уведомления */
 #btnShutdown:hover,
 .btnDelete:hover,
 .notification_important,
@@ -572,35 +656,44 @@ progress {
     background-color: var(--theme-shutdown-colour) !important;
 }
 
+/* Иконки элементов списка */
 .listItemIcon:not(.listItemIcon-transparent) {
     border-radius: var(--theme-roundness);
 }
 
+/* Кнопки карточки сессии */
 .sessionCardButtons {
     margin: .29em 0;
 }
 
+/* Карточки на дашборде */
 .dashboardSection .cardContent {
     border-top-left-radius: var(--theme-roundness);
     border-top-right-radius: var(--theme-roundness);
 }
 
+/* Группа кнопок - первая кнопка */
 div[data-role="controlgroup"] a[data-role="button"]:first-child {
     border-bottom-left-radius: var(--theme-roundness);
     border-top-left-radius: var(--theme-roundness);
 }
 
+/* Группа кнопок - последняя кнопка */
 div[data-role="controlgroup"] a[data-role="button"]:last-child {
     border-bottom-right-radius: var(--theme-roundness);
     border-top-right-radius: var(--theme-roundness);
 }
 
+/* Колонка дашборда */
 .dashboardColumn {
     flex-shrink: inherit;
 }
 
-/* Base Colours */
+/* ========================================
+   БАЗОВЫЕ ЦВЕТА И СЛАЙДЕРЫ
+   ======================================== */
 
+/* Цвет текста для фокусированных элементов и иконок */
 .selectLabelFocused,
 .textareaLabelFocused,
 .inputLabelFocused,
@@ -615,6 +708,7 @@ div[data-role="controlgroup"] a[data-role="button"]:last-child {
     color: var(--theme-text-colour) !important;
 }
 
+/* Фон для активных элементов */
 .emby-checkbox:checked + span + .checkboxOutline,
 .listItemIcon:not(
     .listItemIcon-transparent,
@@ -631,6 +725,7 @@ div[data-role="controlgroup"] a.ui-btn-active,
     background-color: var(--theme-base-colour) !important;
 }
 
+/* Цвет границ для чекбоксов и спиннеров */
 .emby-checkbox + span + .checkboxOutline,
 .emby-checkbox:checked + span + .checkboxOutline,
 .emby-checkbox:focus:not(:checked) + span + .checkboxOutline,
@@ -641,6 +736,7 @@ div[data-role="controlgroup"] a.ui-btn-active,
     border-color: var(--theme-base-colour) !important;
 }
 
+/* Слайдер - базовые стили */
 .mdl-slider {
     -webkit-appearance: none;
     appearance: none;
@@ -648,6 +744,7 @@ div[data-role="controlgroup"] a.ui-btn-active,
     background: transparent;
 }
 
+/* Ползунок слайдера - WebKit */
 .mdl-slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
@@ -657,6 +754,7 @@ div[data-role="controlgroup"] a.ui-btn-active,
     cursor: pointer;
 }
 
+/* Ползунок слайдера - Firefox */
 .mdl-slider::-moz-range-thumb {
     width: 0;
     height: 0;
@@ -664,6 +762,7 @@ div[data-role="controlgroup"] a.ui-btn-active,
     cursor: pointer;
 }
 
+/* Ползунок слайдера - IE/Edge */
 .mdl-slider::-ms-thumb {
     width: 0;
     height: 0;
@@ -671,6 +770,7 @@ div[data-role="controlgroup"] a.ui-btn-active,
     cursor: pointer;
 }
 
+/* Фон слайдера */
 .mdl-slider-background-flex,
 .mdl-slider-background-lower,
 .mdl-slider-background-upper {
@@ -679,7 +779,11 @@ div[data-role="controlgroup"] a.ui-btn-active,
     height: 10px;
 }
 
-/* Chapter Markers */
+/* ========================================
+   МАРКЕРЫ ГЛАВ
+   ======================================== */
+
+/* Контейнер маркеров глав */
 .sliderMarkerContainer {
     position: absolute;
     top: 0;
@@ -690,6 +794,7 @@ div[data-role="controlgroup"] a.ui-btn-active,
     z-index: 1;
 }
 
+/* Отдельный маркер главы */
 .sliderMarker {
     position: absolute;
     top: 0;
@@ -703,22 +808,31 @@ div[data-role="controlgroup"] a.ui-btn-active,
     transition: opacity 0.2s ease, width 0.2s ease, background-color 0.2s ease;
 }
 
+/* Непросмотренный маркер */
 .sliderMarker.unwatched {
     background-color: var(--theme-chapter-marker-colour);
 }
 
+/* Просмотренный маркер */
 .sliderMarker.watched {
     background-color: var(--theme-chapter-marker-watched-colour);
 }
 
+/* Верхний фон слайдера */
 .mdl-slider-background-upper {
     margin-left:  -3px;
 }
 
+/* Контейнер фона слайдера */
 .mdl-slider-background-flex-container {
     top: 5px;
 }
 
+/* ========================================
+   ПРОГРЕСС-БАРЫ
+   ======================================== */
+
+/* Заполненная часть прогресс-бара */
 .innerCardFooter .itemProgressBarForeground,
 .playbackProgress > div,
 .mdl-slider-background-lower,
@@ -728,7 +842,7 @@ progress {
     background-color: var(--theme-progress-bar-colour) !important;
 }
 
-/* These need to remain separate for browser compatibility */
+/* Совместимость с разными браузерами для progress */
 progress::-moz-progress-bar {
     background-color: var(--theme-progress-bar-colour);
 }
@@ -739,10 +853,12 @@ progress::-ms-thumb {
     background-color: var(--theme-progress-bar-colour);
 }
 
+/* Прогресс транскодирования */
 .transcodingProgress > div {
     background-color: var(--theme-progress-bar-transcoding-colour) !important;
 }
 
+/* Фон прогресс-бара */
 .innerCardFooter .itemProgressBar,
 .backgroundProgress > div,
 .mdl-slider-background-flex,
@@ -751,17 +867,22 @@ progress {
     background-color: var(--theme-progress-bar-background-colour) !important;
 }
 
+/* Отступы контента дашборда */
 .layout-desktop .dashboardDocument .content-primary:not(.layout-desktop #dashboardPage .content-primary) {
     padding-left: 2.5em;
     padding-right: 2.5em;
 }
 
+/* Заголовок диалогового окна */
 [dir="ltr"] .formDialogHeaderTitle:first-child {
     margin-left: unset;
 }
 
-/* Login Form */
+/* ========================================
+   ФОРМА ВХОДА
+   ======================================== */
 
+/* Страница входа в систему */
 #loginPage {
     background-color: var(--theme-menu-background-colour);
     border-radius: var(--theme-roundness);
@@ -772,15 +893,22 @@ progress {
     margin: 150px auto 0;
 }
 
+/* Кнопка входа в ручной форме */
 .manualLoginForm .raised.button-submit.block.emby-button {
     margin-bottom: -3px;
 }
 
+/* ========================================
+   МАРКЕРЫ ГЛАВ ВИДЕО
+   ======================================== */
+
+/* Контейнер текста миниатюры главы */
 .chapterThumbTextContainer {
     width: fit-content;
     margin: auto;
 }
 
+/* Текст миниатюры главы */
 .chapterThumbText {
     width: fit-content;
 }
