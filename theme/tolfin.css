@@ -1008,7 +1008,7 @@ progress {
    ======================================== */
 
 .pageTitleWithDefaultLogo,
-.splashLogo {
+.spashLogo {
     background-image: var(--banner-url) !important;
 }
 
