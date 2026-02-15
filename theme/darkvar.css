@@ -605,6 +605,19 @@ progress {
     -ms-filter: blur(5px);
 }
 
+/* Принудительная замена баннера для всех макетов */
+.layout-desktop .homeBackdropContainer,
+.layout-desktop .itemBackdrop,
+.layout-desktop .backdropImage,
+.layout-mobile .homeBackdropContainer,
+.layout-mobile .itemBackdrop,
+.layout-mobile .backdropImage {
+    background-image: url("https://cdn.jsdelivr.net/gh/OlegTolchin/Tolfin@latest/assets/banner.png") !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
 /* Затемнение контента */
 .darkenContent {
     backdrop-filter: blur(5px) brightness(0.75);
@@ -902,9 +915,11 @@ progress {
    КАСТОМНЫЙ БАННЕР
    ======================================== */
 
-/* Замена стандартного баннера Jellyfin на кастомный */
+/* Замена стандартного баннера Jellyfin на кастомный - главная страница */
+.homeBackdropContainer,
 .itemBackdrop,
-.backdropImage {
+.backdropImage,
+.backgroundContainer.withBackdrop {
     background-image: url("https://cdn.jsdelivr.net/gh/OlegTolchin/Tolfin@latest/assets/banner.png") !important;
     background-size: cover !important;
     background-position: center !important;
