@@ -24,6 +24,7 @@
 
     /* URL кастомного баннера */
     --logo-url: url('https://cdn.jsdelivr.net/gh/OlegTolchin/Tolfin@latest/assets/banner.png');
+    --banner-url: url('https://cdn.jsdelivr.net/gh/OlegTolchin/Tolfin@latest/assets/banner.png');
 }
 
 /* ========================================
@@ -902,13 +903,27 @@ progress {
 }
 
 /* ========================================
-   КАСТОМНЫЙ БАННЕР
+   КАСТОМНЫЙ БАННЕР И ЛОГОТИП
    ======================================== */
 
-/* Замена стандартного баннера Jellyfin на кастомный */
+/* Замена логотипа на кастомный */
 .pageTitleWithDefaultLogo,
-.splashLogo {
+.splashLogo,
+.loginLogo {
     background-image: var(--logo-url) !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+/* Замена фона баннера на главной странице */
+.homeBackdropContainer,
+.backgroundContainer.withBackdrop,
+.itemBackdrop {
+    background-image: var(--banner-url) !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
 }
 
 /* ========================================
