@@ -1003,12 +1003,22 @@ progress {
    МОДУЛЬ: КАСТОМНЫЙ ЛОГОТИП
    ======================================== */
 
-.pageTitleWithDefaultLogo {
+.pageTitleWithDefaultLogo,
+.pageTitleWithDefaultLogo *,
+html .pageTitleWithDefaultLogo {
     background-image: var(--banner-url) !important;
+    background-size: contain !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
 }
 
-.splashLogo {
+.splashLogo,
+.splashLogo *,
+html .splashLogo {
     background-image: var(--logo-url) !important;
+    background-size: contain !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
 }
 
 /* ========================================
