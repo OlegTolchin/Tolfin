@@ -899,6 +899,19 @@ progress {
 }
 
 /* ========================================
+   КАСТОМНЫЙ БАННЕР
+   ======================================== */
+
+/* Замена стандартного баннера Jellyfin на кастомный */
+.itemBackdrop,
+.backdropImage {
+    background-image: url("https://cdn.jsdelivr.net/gh/OlegTolchin/Tolfin@latest/assets/banner.png") !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+/* ========================================
    МАРКЕРЫ ГЛАВ ВИДЕО
    ======================================== */
 
