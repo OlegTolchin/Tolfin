@@ -1,9 +1,10 @@
 /*
     ========================================
-    TOLFIN - Базовая тема для Jellyfin
+    TOLFIN - Полная тема для Jellyfin
     ========================================
     Модернизированная тема с кастомными шрифтами,
     плавными анимациями и адаптивным дизайном.
+    Включает все модули.
 */
 
 /* ========================================
@@ -31,6 +32,14 @@
 
     /* URL изображений */
     --banner-url: url('https://cdn.jsdelivr.net/gh/OlegTolchin/Tolfin@latest/assets/banner.png');
+    --logo-url: url('https://cdn.jsdelivr.net/gh/OlegTolchin/Tolfin@latest/assets/logo.png');
+
+    /* Переменные модулей */
+    --show-count-indicators: flex;                         /* none для скрытия индикаторов */
+    --count-indicator-colour: rgba(200, 200, 200, 0.75);  /* Цвет индикаторов счётчиков */
+    --played-indicator-colour: rgba(32, 139, 36, 0.75);   /* Цвет индикатора просмотренного */
+    --floating-progress-roundness: .75rem;                 /* Скругление плавающего прогресса */
+    --floating-progress-height: 10px;                      /* Высота плавающего прогресса */
 }
 
 /* ========================================
@@ -919,6 +928,12 @@ progress {
     margin-bottom: -3px;
 }
 
+/* Убрать кнопку "Забыли пароль" */
+#btnResetPassword,
+.btnForgotPassword {
+    display: none !important;
+}
+
 /* ========================================
    МАРКЕРЫ ГЛАВ ВИДЕО
    ======================================== */
@@ -932,4 +947,216 @@ progress {
 /* Текст миниатюры главы */
 .chapterThumbText {
     width: fit-content;
+}
+
+/* ========================================
+   МОДУЛЬ: СТАТИЧНАЯ БОКОВАЯ ПАНЕЛЬ
+   ======================================== */
+
+.layout-desktop .mainDrawer,
+.MuiDrawer-paperAnchorLeft {
+    left: 0 !important;
+    top: 0;
+    width: 250px !important;
+    background-color: var(--theme-sidebar-background-colour) !important;
+    z-index: 100;
+}
+
+.layout-desktop .mainDrawerButton,
+.layout-desktop .headerHomeButton {
+    display: none;
+}
+
+.layout-desktop .libraryPage:not(#editItemMetadataPage) {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+}
+
+.layout-desktop #slides-container {
+    margin-left: 320px;
+    width: calc(100% - 385px);
+}
+
+.layout-desktop .hide-scroll .mainDrawer,
+.layout-desktop .hideMainDrawer .mainDrawer {
+    display: none;
+}
+
+/* ========================================
+   МОДУЛЬ: ЦЕНТРИРОВАННЫЕ БИБЛИОТЕКИ
+   ======================================== */
+
+#indexPage .section0 .itemsContainer.padded-left.padded-right {
+    justify-content: center !important;
+    padding-top: 15px !important;
+}
+
+/* ========================================
+   МОДУЛЬ: КАСТОМНЫЙ ЛОГОТИП
+   ======================================== */
+
+.pageTitleWithDefaultLogo,
+.spashLogo {
+    background-image: var(--logo-url) !important;
+}
+
+/* ========================================
+   МОДУЛЬ: ИНДИКАТОРЫ СЧЁТЧИКОВ
+   ======================================== */
+
+.countIndicator {
+    display: var(--show-count-indicators);
+}
+
+.countIndicator,
+.fullSyncIndicator,
+.mediaSourceIndicator,
+.playedIndicator {
+    background: var(--count-indicator-colour);
+}
+
+.playedIndicator {
+    background: var(--played-indicator-colour);
+}
+
+/* ========================================
+   МОДУЛЬ: СКРЫТЬ "МОИ МЕДИА"
+   ======================================== */
+
+#indexPage .section0 .sectionTitle {
+    display: none;
+}
+
+#indexPage .section0 {
+    padding-top: 1em;
+}
+
+#indexPage .verticalSection.section0 {
+    padding-top: 3em;
+}
+
+/* ========================================
+   МОДУЛЬ: АНИМАЦИЯ КАРТОЧЕК
+   ======================================== */
+
+.cardBox:hover {
+    transform: translateY(-2.5px);
+    -webkit-transform: translateY(-2.5px);
+    -moz-transform: translateY(-2.5px);
+    -ms-transform: translateY(-2.5px);
+    -o-transform: translateY(-2.5px);
+}
+
+/* ========================================
+   МОДУЛЬ: МЕНЬШИЕ КАРТОЧКИ АКТЁРОВ
+   ======================================== */
+
+#castContent .card.overflowPortraitCard.personCard.card-hoverable.card-withuserdata {
+    width: 4.2cm;
+    font-size: 90%;
+}
+
+#castContent .cardContent-button.cardImageContainer.coveredImage.cardContent.cardContent-shadow.itemAction.lazy {
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+#castContent .cardContent-button.cardImageContainer.coveredImage.defaultCardBackground.defaultCardBackground1.cardContent.cardContent-shadow.itemAction {
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+#castContent .cardContent-button.cardImageContainer.coveredImage.defaultCardBackground.defaultCardBackground2.cardContent.cardContent-shadow.itemAction {
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+#castContent .cardContent-button.cardImageContainer.coveredImage.defaultCardBackground.defaultCardBackground3.cardContent.cardContent-shadow.itemAction {
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+#castContent .cardContent-button.cardImageContainer.coveredImage.defaultCardBackground.defaultCardBackground4.cardContent.cardContent-shadow.itemAction {
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+#castContent .cardContent-button.cardImageContainer.coveredImage.defaultCardBackground.defaultCardBackground5.cardContent.cardContent-shadow.itemAction {
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+#castContent .cardScalable {
+    width: 3.8cm;
+    height: 3.8cm;
+}
+
+#castContent .cardOverlayButton-br {
+    bottom: 4%;
+    right: 15%;
+    width: 70%;
+}
+
+#castContent .cardOverlayButton.cardOverlayButton-hover.itemAction.paper-icon-button-light {
+    margin: auto;
+}
+
+#castContent .cardBox:not(.visualCardBox) .cardPadder {
+    background-color: unset;
+}
+
+#castContent .cardBox:not(.visualCardBox) .cardPadder,
+#castContent .cardContent-shadow {
+    box-shadow: unset;
+}
+
+/* ========================================
+   МОДУЛЬ: ПЛАВАЮЩИЕ ПРОГРЕСС-БАРЫ
+   ======================================== */
+
+.sessionNowPlayingDetails {
+    padding-bottom: 10px;
+}
+
+.fullInnerCardFooter,
+.activeSession .backgroundProgress,
+.activeSession .playbackProgress,
+.activeSession .transcodingProgress {
+    width: 95%;
+    bottom: 10px;
+    margin: 0 auto;
+    height: var(--floating-progress-height);
+    border-radius: var(--floating-progress-roundness) !important;
+    -webkit-border-radius: var(--floating-progress-roundness) !important;
+    -moz-border-radius: var(--floating-progress-roundness) !important;
+}
+
+.itemProgressBar {
+    height: var(--floating-progress-height);
+    box-shadow: inset 0 1px var(--theme-menu-shadow-colour);
+    -webkit-box-shadow: inset 0 1px var(--theme-menu-shadow-colour);
+    -moz-box-shadow: inset 0 1px var(--theme-menu-shadow-colour);
+}
+
+.playbackProgress > div,
+.backgroundProgress > div,
+.transcodingProgress > div {
+    box-shadow: inset 0 1px var(--theme-menu-shadow-colour);
+    -webkit-box-shadow: inset 0 1px var(--theme-menu-shadow-colour);
+    -moz-box-shadow: inset 0 1px var(--theme-menu-shadow-colour);
+    border-radius: var(--floating-progress-roundness);
+    -webkit-border-radius: var(--floating-progress-roundness);
+    -moz-border-radius: var(--floating-progress-roundness);
 }

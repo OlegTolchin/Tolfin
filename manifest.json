@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": "OlegTolchin",
   "repository": "https://github.com/OlegTolchin/Tolfin",
-  "url": "https://cdn.jsdelivr.net/gh/OlegTolchin/Tolfin@latest/theme/complete.css",
+  "url": "https://cdn.jsdelivr.net/gh/OlegTolchin/Tolfin@latest/theme/tolfin.css",
   "target": "jellyfin",
   "categories": ["theme", "css"]
 }
