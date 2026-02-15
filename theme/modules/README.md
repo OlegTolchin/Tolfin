@@ -24,16 +24,6 @@
 
 ---
 
-### change-logo.css
-Заменяет логотип Jellyfin на кастомный.
-
-**Использование:**
-```css
-@import url("https://cdn.jsdelivr.net/gh/OlegTolchin/Tolfin@latest/theme/modules/change-logo.css");
-```
-
----
-
 ### count-indicators.css
 Изменяет цвет индикаторов счётчиков (количество эпизодов, и т.д.).
 
@@ -96,14 +86,14 @@
 
 ## Использование модулей
 
-### С базовой темой:
-```css
-@import url("https://cdn.jsdelivr.net/gh/OlegTolchin/Tolfin@latest/theme/base.css");
-@import url("https://cdn.jsdelivr.net/gh/OlegTolchin/Tolfin@latest/theme/modules/static-sidebar.css");
-@import url("https://cdn.jsdelivr.net/gh/OlegTolchin/Tolfin@latest/theme/modules/change-logo.css");
-```
-
 ### Полная тема (все модули):
 ```css
-@import url("https://cdn.jsdelivr.net/gh/OlegTolchin/Tolfin@latest/theme/complete.css");
+@import url("https://cdn.jsdelivr.net/gh/OlegTolchin/Tolfin@latest/theme/tolfin.css");
+```
+
+### Индивидуальные модули:
+```css
+@import url("https://cdn.jsdelivr.net/gh/OlegTolchin/Tolfin@latest/theme/modules/static-sidebar.css");
+@import url("https://cdn.jsdelivr.net/gh/OlegTolchin/Tolfin@latest/theme/modules/central-libraries-small.css");
+/* Добавляйте нужные модули */
 ```

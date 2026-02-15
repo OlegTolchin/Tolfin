@@ -32,7 +32,6 @@
 
     /* URL изображений */
     --banner-url: url('https://cdn.jsdelivr.net/gh/OlegTolchin/Tolfin@latest/assets/banner.png');
-    --logo-url: url('https://cdn.jsdelivr.net/gh/OlegTolchin/Tolfin@latest/assets/logo.png');
 
     /* Переменные модулей */
     --show-count-indicators: flex;                         /* none для скрытия индикаторов */
@@ -82,7 +81,6 @@ html {
 }
 
 /* Высота заголовка с логотипом */
-.pageTitleWithLogo {
     height: 50px;
 }
 
@@ -215,7 +213,6 @@ html {
         width: auto;
     }
 
-    .layout-mobile .pageTitleWithLogo {
         height: 40px;
     }
 }
@@ -616,9 +613,10 @@ progress {
 }
 
 /* Кастомный баннер для фона */
-.homeBackdropContainer:not(.pageTitleWithDefaultLogo),
-.backgroundContainer.withBackdrop:not(.pageTitleWithDefaultLogo),
-.itemBackdrop:not(.pageTitleWithDefaultLogo) {
+.homeBackdropContainer,
+.backgroundContainer.withBackdrop,
+.itemBackdrop,
+.backdropImage {
     background-image: var(--banner-url) !important;
     background-size: cover !important;
     background-position: center !important;
@@ -1004,8 +1002,6 @@ progress {
    ======================================== */
 
 /* Главная страница — БАННЕР */
-html .pageTitleWithDefaultLogo,
-html .pageTitleWithLogo .pageTitle,
 html [class*="pageTitle"]:not([class*="item"]),
 body:not(.splashScreen) [class*="logo"] {
     background-image: var(--banner-url) !important;
@@ -1016,10 +1012,8 @@ body:not(.splashScreen) [class*="logo"] {
 }
 
 /* Экран загрузки — ЛОГО */
-html .splashLogo,
 html .splashScreen [class*="logo"],
 html body.splashScreen div {
-    background-image: var(--logo-url) !important;
     background-size: contain !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
