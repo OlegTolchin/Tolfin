@@ -1,0 +1,26 @@
+/*
+    Этот модуль изменяет цвет индикаторов счётчиков.
+    Простой способ сделать Jellyfin более современным.
+    Может использоваться как отдельный модуль.
+*/
+
+:root {
+    --show-count-indicators: flex; /* none для скрытия */
+    --count-indicator-colour: rgba(200, 200, 200, 0.75);
+    --played-indicator-colour: rgba(32, 139, 36, 0.75);
+}
+
+.countIndicator {
+    display: var(--show-count-indicators);
+}
+
+.countIndicator,
+.fullSyncIndicator,
+.mediaSourceIndicator,
+.playedIndicator {
+    background: var(--count-indicator-colour);
+}
+
+.playedIndicator {
+    background: var(--played-indicator-colour);
+}

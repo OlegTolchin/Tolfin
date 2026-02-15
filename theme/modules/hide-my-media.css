@@ -1,0 +1,17 @@
+/*
+    Этот модуль скрывает секцию "Мои медиа" с главной страницы Jellyfin.
+    Полезно для более минималистичного вида главной страницы.
+    Может использоваться как отдельный модуль.
+*/
+
+#indexPage .section0 .sectionTitle {
+    display: none;
+}
+
+#indexPage .section0 {
+    padding-top: 1em;
+}
+
+#indexPage .verticalSection.section0 {
+    padding-top: 3em;
+}

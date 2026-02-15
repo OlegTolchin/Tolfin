@@ -1,0 +1,21 @@
+/*
+    ========================================
+    TOLFIN - Полная тема для Jellyfin
+    ========================================
+    Полная тема включающая все модули.
+    Импортирует базовую тему и все модули.
+*/
+
+/* Импорт базовой темы */
+@import url("https://cdn.jsdelivr.net/gh/OlegTolchin/Tolfin@latest/theme/base.css");
+
+/* Импорт модулей */
+@import url("https://cdn.jsdelivr.net/gh/OlegTolchin/Tolfin@latest/theme/modules/static-sidebar.css");
+@import url("https://cdn.jsdelivr.net/gh/OlegTolchin/Tolfin@latest/theme/modules/central-libraries-small.css");
+@import url("https://cdn.jsdelivr.net/gh/OlegTolchin/Tolfin@latest/theme/modules/change-logo.css");
+@import url("https://cdn.jsdelivr.net/gh/OlegTolchin/Tolfin@latest/theme/modules/count-indicators.css");
+@import url("https://cdn.jsdelivr.net/gh/OlegTolchin/Tolfin@latest/theme/modules/forgot-password.css");
+@import url("https://cdn.jsdelivr.net/gh/OlegTolchin/Tolfin@latest/theme/modules/hide-my-media.css");
+@import url("https://cdn.jsdelivr.net/gh/OlegTolchin/Tolfin@latest/theme/modules/moving-cards.css");
+@import url("https://cdn.jsdelivr.net/gh/OlegTolchin/Tolfin@latest/theme/modules/smaller-cast.css");
+@import url("https://cdn.jsdelivr.net/gh/OlegTolchin/Tolfin@latest/theme/modules/floating-progress.css");

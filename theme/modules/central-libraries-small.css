@@ -1,0 +1,10 @@
+/*
+    Этот модуль центрирует секцию "Мои медиа (small)" на главной странице.
+    Полезно для более сбалансированного вида главной страницы.
+    Может использоваться как отдельный модуль.
+*/
+
+#indexPage .section0 .itemsContainer.padded-left.padded-right {
+    justify-content: center !important;
+    padding-top: 15px !important;
+}
