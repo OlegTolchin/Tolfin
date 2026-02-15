@@ -1,0 +1,14 @@
+/*
+    Этот модуль заменяет логотип Jellyfin на кастомный.
+    Позволяет использовать свой логотип в интерфейсе.
+    Может использоваться как отдельный модуль.
+*/
+
+:root {
+    --logo-url: url('https://cdn.jsdelivr.net/gh/OlegTolchin/Tolfin@latest/assets/banner.png');
+}
+
+.pageTitleWithDefaultLogo,
+.spashLogo {
+    background-image: var(--logo-url) !important;
+}

@@ -21,10 +21,6 @@
     /* Общие параметры внешнего вида */
     --theme-roundness: .75rem;                             /* Скругление углов */
     --theme-blur: 16px;                                    /* Сила размытия фона */
-
-    /* URL кастомного баннера */
-    --logo-url: url('https://cdn.jsdelivr.net/gh/OlegTolchin/Tolfin@latest/assets/banner.png');
-    --banner-url: url('https://cdn.jsdelivr.net/gh/OlegTolchin/Tolfin@latest/assets/banner.png');
 }
 
 /* ========================================
@@ -903,30 +899,6 @@ progress {
 }
 
 /* ========================================
-   КАСТОМНЫЙ БАННЕР И ЛОГОТИП
-   ======================================== */
-
-/* Замена логотипа на кастомный */
-.pageTitleWithDefaultLogo,
-.splashLogo,
-.loginLogo {
-    background-image: var(--logo-url) !important;
-    background-size: contain !important;
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-}
-
-/* Замена фона баннера на главной странице */
-.homeBackdropContainer,
-.backgroundContainer.withBackdrop,
-.itemBackdrop {
-    background-image: var(--banner-url) !important;
-    background-size: cover !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-}
-
-/* ========================================
    МАРКЕРЫ ГЛАВ ВИДЕО
    ======================================== */
 
@@ -940,3 +912,11 @@ progress {
 .chapterThumbText {
     width: fit-content;
 }
+
+/* ========================================
+   МОДУЛИ ТЕМЫ
+   ======================================== */
+
+/* Импорт модуля для замены логотипа */
+@import url("https://cdn.jsdelivr.net/gh/OlegTolchin/Tolfin@latest/theme/change-logo.css");
+
