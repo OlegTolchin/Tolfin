@@ -28,6 +28,9 @@
     /* Общие параметры внешнего вида */
     --theme-roundness: .75rem;                             /* Скругление углов */
     --theme-blur: 16px;                                    /* Сила размытия фона */
+
+    /* URL изображений */
+    --banner-url: url('https://cdn.jsdelivr.net/gh/OlegTolchin/Tolfin@latest/assets/banner.png');
 }
 
 /* ========================================
@@ -601,6 +604,17 @@ progress {
     background-color: unset;
     background-image: unset;
     box-shadow: unset;
+}
+
+/* Кастомный баннер для фона */
+.homeBackdropContainer,
+.backgroundContainer.withBackdrop,
+.itemBackdrop,
+.backdropImage {
+    background-image: var(--banner-url) !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
 }
 
 /* Размытие фонового изображения */

@@ -5,7 +5,7 @@
 */
 
 :root {
-    --logo-url: url('https://cdn.jsdelivr.net/gh/OlegTolchin/Tolfin@latest/assets/banner.png');
+    --logo-url: url('https://cdn.jsdelivr.net/gh/OlegTolchin/Tolfin@latest/assets/logo.png');
 }
 
 .pageTitleWithDefaultLogo,
