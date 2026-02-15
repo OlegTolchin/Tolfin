@@ -907,7 +907,7 @@ progress {
 
 /* Замена стандартного баннера Jellyfin на кастомный */
 .pageTitleWithDefaultLogo,
-.spashLogo {
+.splashLogo {
     background-image: var(--logo-url) !important;
 }
 
