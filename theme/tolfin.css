@@ -616,10 +616,10 @@ progress {
 .homeBackdropContainer,
 .backgroundContainer.withBackdrop,
 .itemBackdrop,
-.backdropImage {
-    background-image: var(--banner-url) !important;
-    background-size: cover !important;
-    background-position: center !important;
+.backdropImage,
+#indexPage .backgroundContainer,
+#indexPage .backdropImage {
+    background-image: var(--banner-url) !important;  /* ← banner.png везде! */
 }
 
 /* Убрать градиентный оверлей на главной странице */
