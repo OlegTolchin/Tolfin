@@ -21,6 +21,9 @@
     /* Общие параметры внешнего вида */
     --theme-roundness: .75rem;                             /* Скругление углов */
     --theme-blur: 16px;                                    /* Сила размытия фона */
+
+    /* URL кастомного баннера */
+    --logo-url: url('https://cdn.jsdelivr.net/gh/OlegTolchin/Tolfin@latest/assets/banner.png');
 }
 
 /* ========================================
@@ -605,19 +608,6 @@ progress {
     -ms-filter: blur(5px);
 }
 
-/* Принудительная замена баннера для всех макетов */
-.layout-desktop .homeBackdropContainer,
-.layout-desktop .itemBackdrop,
-.layout-desktop .backdropImage,
-.layout-mobile .homeBackdropContainer,
-.layout-mobile .itemBackdrop,
-.layout-mobile .backdropImage {
-    background-image: url("https://cdn.jsdelivr.net/gh/OlegTolchin/Tolfin@latest/assets/banner.png") !important;
-    background-size: cover !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-}
-
 /* Затемнение контента */
 .darkenContent {
     backdrop-filter: blur(5px) brightness(0.75);
@@ -915,15 +905,10 @@ progress {
    КАСТОМНЫЙ БАННЕР
    ======================================== */
 
-/* Замена стандартного баннера Jellyfin на кастомный - главная страница */
-.homeBackdropContainer,
-.itemBackdrop,
-.backdropImage,
-.backgroundContainer.withBackdrop {
-    background-image: url("https://cdn.jsdelivr.net/gh/OlegTolchin/Tolfin@latest/assets/banner.png") !important;
-    background-size: cover !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
+/* Замена стандартного баннера Jellyfin на кастомный */
+.pageTitleWithDefaultLogo,
+.spashLogo {
+    background-image: var(--logo-url) !important;
 }
 
 /* ========================================
