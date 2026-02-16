@@ -13,7 +13,7 @@ Modern CSS theme for Jellyfin media server with custom fonts, smooth animations 
    ```
 3. Click Save
 
-**Note:** The `@latest` link always points to the **latest release**, not the latest commit.
+**Note:** The `@latest` link always points to the **latest release** (currently v1.0.1), not the latest commit.
 
 ### Method 2: Manual
 
@@ -27,7 +27,7 @@ Modern CSS theme for Jellyfin media server with custom fonts, smooth animations 
 You can also use a specific version instead of `@latest`:
 
 ```css
-@import url("https://cdn.jsdelivr.net/gh/OlegTolchin/Tolfin@v1.0.0/theme/tolfin.css");
+@import url("https://cdn.jsdelivr.net/gh/OlegTolchin/Tolfin@v1.0.1/theme/tolfin.css");
 ```
 
 See [Releases](https://github.com/OlegTolchin/Tolfin/releases) for available versions.
