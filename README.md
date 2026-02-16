@@ -13,6 +13,8 @@ Modern CSS theme for Jellyfin media server with custom fonts, smooth animations 
    ```
 3. Click Save
 
+**Note:** The `@latest` link always points to the **latest release**, not the latest commit.
+
 ### Method 2: Manual
 
 1. Download `theme/tolfin.css` from this repository
