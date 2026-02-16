@@ -13,8 +13,8 @@
 :root {
     /* Цветовая палитра */
     --theme-background-colour: #101010;                    /* Основной цвет фона */
-    --theme-sidebar-background-colour: #222222;           /* Цвет фона боковой панели */
-    --theme-menu-background-colour: #3a3a3a80;            /* Полупрозрачный цвет фона меню */
+    --theme-sidebar-background-colour: #222222;            /* Цвет фона боковой панели */
+    --theme-menu-background-colour: #3a3a3a80;             /* Полупрозрачный цвет фона меню */
     --theme-menu-shadow-colour: #fff3;                     /* Цвет тени/подсветки элементов меню */
     --theme-base-colour: #696969;                          /* Базовый акцентный цвет */
     --theme-text-colour: #dbdbdb;                          /* Цвет текста */
@@ -27,18 +27,18 @@
     --theme-chapter-marker-watched-colour: #4a4a4a;        /* Цвет просмотренного маркера главы */
 
     /* Общие параметры внешнего вида */
-    --theme-roundness: .75rem;                             /* Скругление углов */
-    --theme-blur: 16px;                                    /* Сила размытия фона */
+    --theme-roundness: .75rem;                               /* Скругление углов */
+    --theme-blur: 16px;                                      /* Сила размытия фона */
 
     /* URL изображений */
     --banner-url: url('https://cdn.jsdelivr.net/gh/OlegTolchin/Tolfin@latest/assets/banner.png');
 
     /* Переменные модулей */
-    --show-count-indicators: flex;                         /* none для скрытия индикаторов */
+    --show-count-indicators: flex;                          /* none для скрытия индикаторов */
     --count-indicator-colour: rgba(200, 200, 200, 0.75);  /* Цвет индикаторов счётчиков */
     --played-indicator-colour: rgba(32, 139, 36, 0.75);   /* Цвет индикатора просмотренного */
-    --floating-progress-roundness: .75rem;                 /* Скругление плавающего прогресса */
-    --floating-progress-height: 10px;                      /* Высота плавающего прогресса */
+    --floating-progress-roundness: .75rem;                  /* Скругление плавающего прогресса */
+    --floating-progress-height: 10px;                       /* Высота плавающего прогресса */
 }
 
 /* ========================================
