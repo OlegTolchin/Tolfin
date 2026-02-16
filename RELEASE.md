@@ -7,17 +7,20 @@
 ## Как создать новый релиз
 
 ### 1. Внесите изменения
-Сделайте все необходимые изменения в коде и отправьте их на GitHub:
+Сделайте все необходимые изменения в коде и отправьте их:
 ```powershell
 git add .
 git commit -m "Описание изменений"
 git push
 ```
 
+Это отправит изменения на GitHub и на Gitea одновременно.
+
 ### 2. Создайте тег версии
 ```powershell
 git tag -a v1.0.1 -m "Release v1.0.1 - Описание изменений"
 git push origin v1.0.1
+git push gitea v1.0.1
 ```
 
 ### 3. Обновите тег latest
@@ -29,25 +32,26 @@ git rev-list -n 1 v1.0.1
 # Обновите тег latest (замените ХЕШ на полученный хеш)
 git tag -f latest ХЕШ
 git push origin latest --force
+git push gitea latest --force
 ```
 
-### 4. Создайте релиз на GitHub
-1. Зайдите на https://github.com/OlegTolchin/Tolfin/releases
-2. Нажмите "Draft a new release"
+### 4. Создайте релиз на Gitea
+1. Зайдите на https://gitea.tolchin.pro/Oleg/Tolfin/releases
+2. Нажмите "New Release"
 3. Выберите созданный тег (например, v1.0.1)
 4. Заполните описание релиза
-5. Нажмите "Publish release"
+5. Нажмите "Publish Release"
 
 ## CDN URL
 
 ### Последняя версия (рекомендуется):
 ```css
-@import url("https://cdn.jsdelivr.net/gh/OlegTolchin/Tolfin@latest/theme/tolfin.css");
+@import url("https://gitea.tolchin.pro/Oleg/Tolfin/raw/branch/latest/theme/tolfin.css");
 ```
 
 ### Конкретная версия:
 ```css
-@import url("https://cdn.jsdelivr.net/gh/OlegTolchin/Tolfin@v1.0.0/theme/tolfin.css");
+@import url("https://gitea.tolchin.pro/Oleg/Tolfin/raw/tag/v1.0.0/theme/tolfin.css");
 ```
 
 ## История релизов

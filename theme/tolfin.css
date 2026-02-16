@@ -31,7 +31,7 @@
     --theme-blur: 16px;                                      /* Сила размытия фона */
 
     /* URL изображений */
-    --banner-url: url('https://cdn.jsdelivr.net/gh/OlegTolchin/Tolfin@latest/assets/banner.png');
+    --banner-url: url('https://gitea.tolchin.pro/Oleg/Tolfin/raw/branch/latest/assets/banner.png');
 
     /* Переменные модулей */
     --show-count-indicators: flex;                          /* none для скрытия индикаторов */

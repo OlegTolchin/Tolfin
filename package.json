@@ -2,11 +2,11 @@
   "name": "tolfin",
   "version": "1.0.0",
   "description": "Modern CSS theme for Jellyfin media server",
-  "author": "OlegTolchin",
+  "author": "Oleg",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/OlegTolchin/Tolfin.git"
+    "url": "https://gitea.tolchin.pro/Oleg/Tolfin.git"
   },
-  "homepage": "https://github.com/OlegTolchin/Tolfin#readme"
+  "homepage": "https://gitea.tolchin.pro/Oleg/Tolfin#readme"
 }
