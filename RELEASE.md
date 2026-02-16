@@ -36,7 +36,7 @@ git push gitea latest --force
 ```
 
 ### 4. Создайте релиз на Gitea
-1. Зайдите на https://gitea.tolchin.pro/Oleg/Tolfin/releases
+1. Зайдите на https://git.tolchin.pro/Oleg/Tolfin/releases
 2. Нажмите "New Release"
 3. Выберите созданный тег (например, v1.0.1)
 4. Заполните описание релиза
@@ -46,12 +46,12 @@ git push gitea latest --force
 
 ### Последняя версия (рекомендуется):
 ```css
-@import url("https://gitea.tolchin.pro/Oleg/Tolfin/raw/branch/latest/theme/tolfin.css");
+@import url("https://git.tolchin.pro/Oleg/Tolfin/raw/branch/latest/theme/tolfin.css");
 ```
 
 ### Конкретная версия:
 ```css
-@import url("https://gitea.tolchin.pro/Oleg/Tolfin/raw/tag/v1.0.0/theme/tolfin.css");
+@import url("https://git.tolchin.pro/Oleg/Tolfin/raw/tag/v1.0.0/theme/tolfin.css");
 ```
 
 ## История релизов

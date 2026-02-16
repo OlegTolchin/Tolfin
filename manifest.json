@@ -3,8 +3,8 @@
   "description": "Modern CSS theme for Jellyfin with custom fonts, smooth animations and responsive design",
   "version": "1.0.0",
   "author": "Oleg",
-  "repository": "https://gitea.tolchin.pro/Oleg/Tolfin",
-  "url": "https://gitea.tolchin.pro/Oleg/Tolfin/raw/branch/latest/theme/tolfin.css",
+  "repository": "https://git.tolchin.pro/Oleg/Tolfin",
+  "url": "https://git.tolchin.pro/Oleg/Tolfin/raw/branch/latest/theme/tolfin.css",
   "target": "jellyfin",
   "categories": ["theme", "css"]
 }

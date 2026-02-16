@@ -9,7 +9,7 @@ Modern CSS theme for Jellyfin media server with custom fonts, smooth animations 
 1. Go to Jellyfin Dashboard → General → Custom CSS
 2. Paste this code:
    ```css
-   @import url("https://gitea.tolchin.pro/Oleg/Tolfin/raw/branch/latest/theme/tolfin.css");
+   @import url("https://git.tolchin.pro/Oleg/Tolfin/raw/branch/latest/theme/tolfin.css");
    ```
 3. Click Save
 
@@ -27,10 +27,10 @@ Modern CSS theme for Jellyfin media server with custom fonts, smooth animations 
 You can also use a specific version instead of `@latest`:
 
 ```css
-@import url("https://gitea.tolchin.pro/Oleg/Tolfin/raw/tag/v1.0.1/theme/tolfin.css");
+@import url("https://git.tolchin.pro/Oleg/Tolfin/raw/tag/v1.0.1/theme/tolfin.css");
 ```
 
-See [Releases](https://gitea.tolchin.pro/Oleg/Tolfin/releases) for available versions.
+See [Releases](https://git.tolchin.pro/Oleg/Tolfin/releases) for available versions.
 
 ## Features
 
@@ -46,7 +46,7 @@ This theme includes a `manifest.json` for automatic installation via theme repos
 
 ## Repository
 
-https://gitea.tolchin.pro/Oleg/Tolfin
+https://git.tolchin.pro/Oleg/Tolfin
 
 ## Author
 
