@@ -9,13 +9,13 @@ Modern CSS theme for Jellyfin media server with custom fonts, smooth animations 
 1. Go to Jellyfin Dashboard → General → Custom CSS
 2. Paste this code:
    ```css
-   @import url("https://git.tolchin.pro/Oleg/Tolfin/raw/branch/main/theme/tolfin.css");
+   @import url("https://git.tolchin.pro/Oleg/Tolfin/raw/branch/main/theme/complete.css");
    ```
 3. Click Save
 
 ### Manual Installation
 
-1. Download `theme/tolfin.css` from this repository
+1. Download `theme/complete.css` from this repository
 2. Go to Jellyfin Dashboard → General → Custom CSS
 3. Paste the contents of the file
 4. Click Save

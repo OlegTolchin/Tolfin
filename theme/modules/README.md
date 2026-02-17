@@ -24,6 +24,16 @@
 
 ---
 
+### change-banner.css
+Заменяет баннер Jellyfin на кастомный.
+
+**Использование:**
+```css
+@import url("https://git.tolchin.pro/Oleg/Tolfin/raw/branch/main/theme/modules/change-banner.css");
+```
+
+---
+
 ### count-indicators.css
 Изменяет цвет индикаторов счётчиков (количество эпизодов, и т.д.).
 
@@ -88,12 +98,13 @@
 
 ### Полная тема (все модули):
 ```css
-@import url("https://git.tolchin.pro/Oleg/Tolfin/raw/branch/main/theme/tolfin.css");
+@import url("https://git.tolchin.pro/Oleg/Tolfin/raw/branch/main/theme/complete.css");
 ```
 
 ### Индивидуальные модули:
 ```css
 @import url("https://git.tolchin.pro/Oleg/Tolfin/raw/branch/main/theme/modules/static-sidebar.css");
 @import url("https://git.tolchin.pro/Oleg/Tolfin/raw/branch/main/theme/modules/central-libraries-small.css");
+@import url("https://git.tolchin.pro/Oleg/Tolfin/raw/branch/main/theme/modules/change-banner.css");
 /* Добавляйте нужные модули */
 ```

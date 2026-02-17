@@ -1,0 +1,30 @@
+/*
+    This module will change the Jellyfin banner to a custom one.
+    This allows you to customise the background on the homepage.
+    This can be used as a standalone module.
+*/
+
+:root {
+    --banner-url: url('https://git.tolchin.pro/Oleg/Tolfin/raw/branch/main/assets/banner.png');
+}
+
+/* Custom banner for background */
+.homeBackdropContainer,
+.backgroundContainer.withBackdrop,
+.itemBackdrop,
+.backdropImage {
+    background-image: var(--banner-url) !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+/* Remove gradient overlay on homepage */
+#indexPage .itemBackdrop::before {
+    display: none !important;
+}
+
+#indexPage .darkenContent {
+    background: none !important;
+    backdrop-filter: none !important;
+}

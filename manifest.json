@@ -3,7 +3,7 @@
   "description": "Modern CSS theme for Jellyfin with custom fonts, smooth animations and responsive design",
   "author": "Oleg",
   "repository": "https://git.tolchin.pro/Oleg/Tolfin",
-  "url": "https://git.tolchin.pro/Oleg/Tolfin/raw/branch/main/theme/tolfin.css",
+  "url": "https://git.tolchin.pro/Oleg/Tolfin/raw/branch/main/theme/complete.css",
   "target": "jellyfin",
   "categories": ["theme", "css"]
 }

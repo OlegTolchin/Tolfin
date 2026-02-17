@@ -1,0 +1,21 @@
+/*
+    ========================================
+    TOLFIN - Полная тема для Jellyfin
+    ========================================
+    Полная тема включающая все модули.
+    Импортирует базовую тему и все модули.
+*/
+
+/* Import base theme */
+@import url("https://git.tolchin.pro/Oleg/Tolfin/raw/branch/main/theme/base.css");
+
+/* Import modules */
+@import url("https://git.tolchin.pro/Oleg/Tolfin/raw/branch/main/theme/modules/static-sidebar.css");
+@import url("https://git.tolchin.pro/Oleg/Tolfin/raw/branch/main/theme/modules/central-libraries-small.css");
+@import url("https://git.tolchin.pro/Oleg/Tolfin/raw/branch/main/theme/modules/change-banner.css");
+@import url("https://git.tolchin.pro/Oleg/Tolfin/raw/branch/main/theme/modules/count-indicators.css");
+@import url("https://git.tolchin.pro/Oleg/Tolfin/raw/branch/main/theme/modules/forgot-password.css");
+@import url("https://git.tolchin.pro/Oleg/Tolfin/raw/branch/main/theme/modules/hide-my-media.css");
+@import url("https://git.tolchin.pro/Oleg/Tolfin/raw/branch/main/theme/modules/moving-cards.css");
+@import url("https://git.tolchin.pro/Oleg/Tolfin/raw/branch/main/theme/modules/smaller-cast.css");
+@import url("https://git.tolchin.pro/Oleg/Tolfin/raw/branch/main/theme/modules/floating-progress.css");
