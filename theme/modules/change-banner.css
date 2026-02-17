@@ -8,10 +8,11 @@
     --banner-url: url('https://git.tolchin.pro/api/v1/repos/Oleg/Tolfin/raw/assets/banner.png?ref=main');
 }
 
-.pageTitleWithDefaultLogo {
-    background-image: none !important;
-}
-
+.pageTitleWithDefaultLogo,
 .pageTitleWithLogo {
     background-image: var(--banner-url) !important;
+    background-repeat: no-repeat !important;
+    background-position: left center !important;
+    background-size: contain !important;
+    padding-left: 80px !important;
 }
