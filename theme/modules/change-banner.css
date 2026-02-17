@@ -5,9 +5,10 @@
 */
 
 :root {
-    --banner-url: url('https://git.tolchin.pro/api/v1/repos/Oleg/Tolfin/raw/assets/banner.png?ref=main');
+    --logo-url: url('https://git.tolchin.pro/api/v1/repos/Oleg/Tolfin/raw/assets/banner.png?ref=main');
 }
 
-.pageTitleWithDefaultLogo {
-    background-image: none !important;
+.pageTitleWithDefaultLogo,
+.spashLogo {
+    background-image: var(--logo-url) !important;
 }
