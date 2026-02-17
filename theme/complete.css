@@ -8,8 +8,6 @@
 
 /* Import base theme */
 @import url("https://git.tolchin.pro/api/v1/repos/Oleg/Tolfin/raw/theme/base.css?ref=main");
-
-/* Import modules */
 @import url("https://git.tolchin.pro/api/v1/repos/Oleg/Tolfin/raw/theme/modules/static-sidebar.css?ref=main");
 @import url("https://git.tolchin.pro/api/v1/repos/Oleg/Tolfin/raw/theme/modules/central-libraries-small.css?ref=main");
 @import url("https://git.tolchin.pro/api/v1/repos/Oleg/Tolfin/raw/theme/modules/change-banner.css?ref=main");

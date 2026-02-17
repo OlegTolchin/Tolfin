@@ -8,7 +8,6 @@
     --banner-url: url('https://git.tolchin.pro/api/v1/repos/Oleg/Tolfin/raw/assets/banner.png?ref=main');
 }
 
-.pageTitleWithDefaultLogo,
 .pageTitleWithLogo {
     background-image: var(--banner-url) !important;
 }
