@@ -9,6 +9,11 @@
 }
 
 .pageTitleWithDefaultLogo,
+<<<<<<< HEAD
 .pageTitleWithLogo {
+=======
+.pageTitleWithLogo,
+.splashLogo {
+>>>>>>> 205270d576029208157855f7ee3fe0468c09e730
     background-image: var(--banner-url) !important;
 }
