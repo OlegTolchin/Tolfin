@@ -2,6 +2,10 @@
 
 Modern CSS theme for Jellyfin media server with custom fonts, smooth animations and responsive design.
 
+## Note
+
+This project uses Gitea API for loading CSS files to bypass browser ORB restrictions.
+
 ## Installation
 
 ### Via CDN URL (Recommended)
