@@ -7,15 +7,15 @@
 */
 
 /* Import base theme */
-@import url("https://git.tolchin.pro/Oleg/Tolfin/raw/branch/main/theme/base.css");
+@import url("https://git.tolchin.pro/api/v1/repos/Oleg/Tolfin/raw/branch/main/theme/base.css?ref=main");
 
 /* Import modules */
-@import url("https://git.tolchin.pro/Oleg/Tolfin/raw/branch/main/theme/modules/static-sidebar.css");
-@import url("https://git.tolchin.pro/Oleg/Tolfin/raw/branch/main/theme/modules/central-libraries-small.css");
-@import url("https://git.tolchin.pro/Oleg/Tolfin/raw/branch/main/theme/modules/change-banner.css");
-@import url("https://git.tolchin.pro/Oleg/Tolfin/raw/branch/main/theme/modules/count-indicators.css");
-@import url("https://git.tolchin.pro/Oleg/Tolfin/raw/branch/main/theme/modules/forgot-password.css");
-@import url("https://git.tolchin.pro/Oleg/Tolfin/raw/branch/main/theme/modules/hide-my-media.css");
-@import url("https://git.tolchin.pro/Oleg/Tolfin/raw/branch/main/theme/modules/moving-cards.css");
-@import url("https://git.tolchin.pro/Oleg/Tolfin/raw/branch/main/theme/modules/smaller-cast.css");
-@import url("https://git.tolchin.pro/Oleg/Tolfin/raw/branch/main/theme/modules/floating-progress.css");
+@import url("https://git.tolchin.pro/api/v1/repos/Oleg/Tolfin/raw/branch/main/theme/modules/static-sidebar.css?ref=main");
+@import url("https://git.tolchin.pro/api/v1/repos/Oleg/Tolfin/raw/branch/main/theme/modules/central-libraries-small.css?ref=main");
+@import url("https://git.tolchin.pro/api/v1/repos/Oleg/Tolfin/raw/branch/main/theme/modules/change-banner.css?ref=main");
+@import url("https://git.tolchin.pro/api/v1/repos/Oleg/Tolfin/raw/branch/main/theme/modules/count-indicators.css?ref=main");
+@import url("https://git.tolchin.pro/api/v1/repos/Oleg/Tolfin/raw/branch/main/theme/modules/forgot-password.css?ref=main");
+@import url("https://git.tolchin.pro/api/v1/repos/Oleg/Tolfin/raw/branch/main/theme/modules/hide-my-media.css?ref=main");
+@import url("https://git.tolchin.pro/api/v1/repos/Oleg/Tolfin/raw/branch/main/theme/modules/moving-cards.css?ref=main");
+@import url("https://git.tolchin.pro/api/v1/repos/Oleg/Tolfin/raw/branch/main/theme/modules/smaller-cast.css?ref=main");
+@import url("https://git.tolchin.pro/api/v1/repos/Oleg/Tolfin/raw/branch/main/theme/modules/floating-progress.css?ref=main");
