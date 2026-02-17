@@ -9,7 +9,7 @@
 
 **Использование:**
 ```css
-@import url("https://git.tolchin.pro/api/v1/repos/Oleg/Tolfin/raw/branch/main?ref=main/theme/modules/static-sidebar.css");
+@import url("https://git.tolchin.pro/api/v1/repos/Oleg/Tolfin/raw/branch/main/theme/modules/static-sidebar.css?ref=main");
 ```
 
 ---
@@ -19,7 +19,7 @@
 
 **Использование:**
 ```css
-@import url("https://git.tolchin.pro/api/v1/repos/Oleg/Tolfin/raw/branch/main?ref=main/theme/modules/central-libraries-small.css");
+@import url("https://git.tolchin.pro/api/v1/repos/Oleg/Tolfin/raw/branch/main/theme/modules/central-libraries-small.css?ref=main");
 ```
 
 ---
@@ -29,7 +29,7 @@
 
 **Использование:**
 ```css
-@import url("https://git.tolchin.pro/api/v1/repos/Oleg/Tolfin/raw/branch/main?ref=main/theme/modules/change-banner.css");
+@import url("https://git.tolchin.pro/api/v1/repos/Oleg/Tolfin/raw/branch/main/theme/modules/change-banner.css?ref=main");
 ```
 
 ---
@@ -39,7 +39,7 @@
 
 **Использование:**
 ```css
-@import url("https://git.tolchin.pro/api/v1/repos/Oleg/Tolfin/raw/branch/main?ref=main/theme/modules/count-indicators.css");
+@import url("https://git.tolchin.pro/api/v1/repos/Oleg/Tolfin/raw/branch/main/theme/modules/count-indicators.css?ref=main");
 ```
 
 ---
@@ -49,7 +49,7 @@
 
 **Использование:**
 ```css
-@import url("https://git.tolchin.pro/api/v1/repos/Oleg/Tolfin/raw/branch/main?ref=main/theme/modules/forgot-password.css");
+@import url("https://git.tolchin.pro/api/v1/repos/Oleg/Tolfin/raw/branch/main/theme/modules/forgot-password.css?ref=main");
 ```
 
 ---
@@ -59,7 +59,7 @@
 
 **Использование:**
 ```css
-@import url("https://git.tolchin.pro/api/v1/repos/Oleg/Tolfin/raw/branch/main?ref=main/theme/modules/hide-my-media.css");
+@import url("https://git.tolchin.pro/api/v1/repos/Oleg/Tolfin/raw/branch/main/theme/modules/hide-my-media.css?ref=main");
 ```
 
 ---
@@ -69,7 +69,7 @@
 
 **Использование:**
 ```css
-@import url("https://git.tolchin.pro/api/v1/repos/Oleg/Tolfin/raw/branch/main?ref=main/theme/modules/moving-cards.css");
+@import url("https://git.tolchin.pro/api/v1/repos/Oleg/Tolfin/raw/branch/main/theme/modules/moving-cards.css?ref=main");
 ```
 
 ---
@@ -79,7 +79,7 @@
 
 **Использование:**
 ```css
-@import url("https://git.tolchin.pro/api/v1/repos/Oleg/Tolfin/raw/branch/main?ref=main/theme/modules/smaller-cast.css");
+@import url("https://git.tolchin.pro/api/v1/repos/Oleg/Tolfin/raw/branch/main/theme/modules/smaller-cast.css?ref=main");
 ```
 
 ---
@@ -89,7 +89,7 @@
 
 **Использование:**
 ```css
-@import url("https://git.tolchin.pro/api/v1/repos/Oleg/Tolfin/raw/branch/main?ref=main/theme/modules/floating-progress.css");
+@import url("https://git.tolchin.pro/api/v1/repos/Oleg/Tolfin/raw/branch/main/theme/modules/floating-progress.css?ref=main");
 ```
 
 ---
@@ -98,13 +98,13 @@
 
 ### Полная тема (все модули):
 ```css
-@import url("https://git.tolchin.pro/api/v1/repos/Oleg/Tolfin/raw/branch/main?ref=main/theme/complete.css");
+@import url("https://git.tolchin.pro/api/v1/repos/Oleg/Tolfin/raw/branch/main/theme/complete.css?ref=main");
 ```
 
 ### Индивидуальные модули:
 ```css
-@import url("https://git.tolchin.pro/api/v1/repos/Oleg/Tolfin/raw/branch/main?ref=main/theme/modules/static-sidebar.css");
-@import url("https://git.tolchin.pro/api/v1/repos/Oleg/Tolfin/raw/branch/main?ref=main/theme/modules/central-libraries-small.css");
-@import url("https://git.tolchin.pro/api/v1/repos/Oleg/Tolfin/raw/branch/main?ref=main/theme/modules/change-banner.css");
+@import url("https://git.tolchin.pro/api/v1/repos/Oleg/Tolfin/raw/branch/main/theme/modules/static-sidebar.css?ref=main");
+@import url("https://git.tolchin.pro/api/v1/repos/Oleg/Tolfin/raw/branch/main/theme/modules/central-libraries-small.css?ref=main");
+@import url("https://git.tolchin.pro/api/v1/repos/Oleg/Tolfin/raw/branch/main/theme/modules/change-banner.css?ref=main");
 /* Добавляйте нужные модули */
 ```
