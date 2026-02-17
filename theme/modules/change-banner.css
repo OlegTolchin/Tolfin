@@ -9,6 +9,6 @@
 }
 
 .pageTitleWithDefaultLogo,
-.splashLogo {
+.pageTitleWithLogo {
     background-image: var(--banner-url) !important;
 }
