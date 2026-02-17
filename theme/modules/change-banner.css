@@ -8,23 +8,7 @@
     --banner-url: url('https://git.tolchin.pro/api/v1/repos/Oleg/Tolfin/raw/assets/banner.png?ref=main');
 }
 
-/* Custom banner for background */
-.homeBackdropContainer,
-.backgroundContainer.withBackdrop,
-.itemBackdrop,
-.backdropImage {
+.pageTitleWithDefaultLogo,
+.splashLogo {
     background-image: var(--banner-url) !important;
-    background-size: cover !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-}
-
-/* Remove gradient overlay on homepage */
-#indexPage .itemBackdrop::before {
-    display: none !important;
-}
-
-#indexPage .darkenContent {
-    background: none !important;
-    backdrop-filter: none !important;
 }
