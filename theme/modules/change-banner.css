@@ -8,23 +8,35 @@
     --banner-url: url('https://git.tolchin.pro/api/v1/repos/Oleg/Tolfin/raw/assets/banner.png?ref=main');
 }
 
-/* Custom banner for background */
+/* Custom banner for background - higher specificity */
 .homeBackdropContainer,
 .backgroundContainer.withBackdrop,
 .itemBackdrop,
-.backdropImage {
+.backdropImage,
+#indexPage .backgroundContainer,
+#indexPage .backdropImage,
+.layout-desktop .backgroundContainer.withBackdrop,
+.layout-desktop .itemBackdrop {
     background-image: var(--banner-url) !important;
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
 }
 
-/* Remove gradient overlay on homepage */
-#indexPage .itemBackdrop::before {
-    display: none !important;
-}
-
+/* Remove gradient overlay on homepage - higher specificity */
+#indexPage .itemBackdrop::before,
+.layout-desktop .itemBackdrop::before,
 #indexPage .darkenContent {
+    display: none !important;
     background: none !important;
     backdrop-filter: none !important;
+}
+
+/* Remove blur from backdrop image */
+.layout-desktop .backdropImage {
+    filter: none !important;
+    -webkit-filter: none !important;
+    -moz-filter: none !important;
+    -o-filter: none !important;
+    -ms-filter: none !important;
 }
