@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": "Oleg",
   "repository": "https://git.tolchin.pro/Oleg/Tolfin",
-  "url": "https://git.tolchin.pro/Oleg/Tolfin/raw/branch/latest/theme/tolfin.css",
+  "url": "https://git.tolchin.pro/Oleg/Tolfin/raw/branch/main/theme/tolfin.css",
   "target": "jellyfin",
   "categories": ["theme", "css"]
 }
