@@ -81,6 +81,7 @@ html {
 }
 
 /* Высота заголовка с логотипом */
+.pageTitleWithLogo {
     height: 50px;
 }
 
@@ -213,6 +214,7 @@ html {
         width: auto;
     }
 
+    .layout-mobile .pageTitleWithLogo {
         height: 40px;
     }
 }
@@ -1159,7 +1161,3 @@ progress {
     -moz-border-radius: var(--floating-progress-roundness);
 }
 
-git tag -a v1.0.1 -m "Release v1.0.1"
-git push origin v1.0.1
-git tag -f latest (хеш v1.0.1)
-git push origin latest --force
