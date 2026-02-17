@@ -13,7 +13,7 @@ This project uses Gitea API for loading CSS files to bypass browser ORB restrict
 1. Go to Jellyfin Dashboard → General → Custom CSS
 2. Paste this code:
    ```css
-   @import url("https://git.tolchin.pro/api/v1/repos/Oleg/Tolfin/raw/branch/main/theme/complete.css?ref=main");
+   @import url("https://git.tolchin.pro/api/v1/repos/Oleg/Tolfin/raw/theme/complete.css?ref=main");
    ```
 3. Click Save
 
@@ -31,10 +31,6 @@ This project uses Gitea API for loading CSS files to bypass browser ORB restrict
 - ✨ Smooth animations and transitions
 - 📱 Fully responsive layout
 - 🎯 Optimized for desktop and mobile viewing
-
-## Manifest
-
-This theme includes a `manifest.json` for automatic installation via theme repositories and plugins.
 
 ## Repository
 
