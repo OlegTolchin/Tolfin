@@ -5,8 +5,8 @@
 */
 
 :root {
-    --banner-url: url('https://git.tolchin.pro/Oleg/Tolfin/raw/main/assets/banner.png');
-    --logo-url: url('https://git.tolchin.pro/Oleg/Tolfin/raw/main/assets/logo.png');
+    --banner-url: url('https://git.tolchin.pro/Oleg/Tolfin/raw/branch/main/assets/banner.png');
+    --logo-url: url('https://git.tolchin.pro/Oleg/Tolfin/raw/branch/main/assets/logo.png');
 }
 
 .pageTitleWithDefaultLogo {
