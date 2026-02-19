@@ -1,4 +1,8 @@
-# Tolfin
+
+<div align="center">
+<img src="assets/banner.png" alt="Logo" width="250"/>
+
+# 
 
 Modern CSS theme for Jellyfin media server with custom fonts, smooth animations and responsive design.
 
