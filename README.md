@@ -42,7 +42,7 @@ https://git.tolchin.pro/Oleg/Tolfin
 
 ## Author
 
-Oleg
+Oleg Tolchin
 
 ## License
 
