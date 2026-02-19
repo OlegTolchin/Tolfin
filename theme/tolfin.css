@@ -1,0 +1,1225 @@
+/*
+    ========================================
+    TOLFIN - Полная тема для Jellyfin
+    ========================================
+    Модернизированная тема с кастомными шрифтами,
+    плавными анимациями и адаптивным дизайном.
+    Включает все модули в одном файле.
+*/
+
+/* ========================================
+   ПЕРЕМЕННЫЕ ТЕМЫ
+   ======================================== */
+/* Определяем корневые CSS-переменные для цветовой палитры */
+:root {
+    /* Цветовая палитра */
+    --theme-background-colour: #101010;
+    --theme-sidebar-background-colour: #222222;
+    --theme-menu-background-colour: #3a3a3a80;
+    --theme-menu-shadow-colour: #fff3;
+    --theme-base-colour: #696969;
+    --theme-text-colour: #dbdbdb;
+    --theme-restart-colour: #da87287e;
+    --theme-shutdown-colour: #c21c1c9d;
+    --theme-progress-bar-colour: #cfcfcf;
+    --theme-progress-bar-background-colour: #2c2c2c;
+    --theme-progress-bar-transcoding-colour: #eb7e25;
+    --theme-chapter-marker-colour: #dbdbdb;
+    --theme-chapter-marker-watched-colour: #4a4a4a;
+
+    /* Общие параметры внешнего вида */
+    --theme-roundness: .75rem;
+    --theme-blur: 16px;
+}
+
+/* ========================================
+   МОДУЛЬ: CUSTOM BANNER & LOGO
+   ======================================== */
+/* Определяем URL для кастомного баннера и логотипа */
+:root {
+    --banner-url: url('https://git.tolchin.pro/Oleg/Tolfin/raw/branch/union/assets/banner.png');
+    --logo-url: url('https://git.tolchin.pro/Oleg/Tolfin/raw/branch/union/assets/logo.png');
+}
+
+/* Применяем кастомный баннер к заголовку страницы */
+.pageTitleWithDefaultLogo {
+    background-image: var(--banner-url) !important;
+}
+
+/* Применяем кастомный логотип к экрану загрузки */
+.splashLogo {
+    background-image: var(--logo-url) !important;
+}
+
+/* ========================================
+   МОДУЛЬ: COUNT INDICATORS
+   ======================================== */
+/* Определяем переменные для индикаторов счётчиков */
+:root {
+    --show-count-indicators: flex; /* none для скрытия */
+    --count-indicator-colour: rgba(200, 200, 200, 0.75);
+    --played-indicator-colour: rgba(32, 139, 36, 0.75);
+}
+
+/* Управляем отображением индикаторов счётчиков */
+.countIndicator {
+    display: var(--show-count-indicators);
+}
+
+/* Применяем цвет ко всем индикаторам счётчиков */
+.countIndicator,
+.fullSyncIndicator,
+.mediaSourceIndicator,
+.playedIndicator {
+    background: var(--count-indicator-colour);
+}
+
+/* Применяем отдельный цвет к индикатору просмотренного */
+.playedIndicator {
+    background: var(--played-indicator-colour);
+}
+
+/* ========================================
+   БАЗОВЫЕ СТИЛИ
+   ======================================== */
+
+/* Убираем стандартный контур фокуса */
+*:focus-visible {
+    outline: none;
+}
+
+/* Изменяем цвета фона для основных контейнеров */
+.backgroundContainer,
+.mainDrawer,
+.drawer-open,
+.nowPlayingPlaylist,
+.nowPlayingContextMenu,
+html {
+    background-color: var(--theme-background-colour);
+}
+
+/* ========================================
+   ПЕРЕОФОРМЛЕНИЕ ЗАГОЛОВКА
+   ======================================== */
+
+/* Настраиваем отступ для заголовка страницы на десктопе */
+.layout-desktop [dir="ltr"] .pageTitle {
+    margin-left: 1.2em;
+}
+
+/* Настраиваем отступ и жирность шрифта для заголовка боковой панели */
+[dir="ltr"] .sidebarHeader {
+    padding-left: 2em;
+    font-weight: bold;
+}
+
+/* Настраиваем отступы для пунктов меню */
+[dir="ltr"] .navMenuOption {
+    padding: .9em 1.2em !important;
+}
+
+/* Устанавливаем высоту заголовка с логотипом */
+.pageTitleWithLogo {
+    height: 50px;
+}
+
+/* Делаем заголовок прозрачным */
+.skinHeader {
+    background-color: transparent;
+}
+
+/* Настраиваем отступы для левой и правой части заголовка на десктопе */
+.layout-desktop .headerLeft,
+.layout-desktop .headerRight {
+    margin-top: 1rem;
+}
+
+/* Настраиваем отступы для правой части заголовка на мобильных устройствах */
+.layout-mobile .headerRight {
+    margin: 0 .29em;
+}
+
+/* Настраиваем отступ сверху для страниц библиотеки на мобильных устройствах */
+.layout-mobile .libraryPage:not(.noSecondaryNavPage) {
+    padding-top: 8.5em !important;
+}
+
+/* Настраиваем размер и трансформацию иконок в кнопках */
+.paper-icon-button-light > div {
+    width: 25px;
+    height: 25px;
+    transform: unset;
+}
+
+/* Убираем цвет фона для полупрозрачного заголовка */
+.skinHeader.semiTransparent {
+    background-color: unset;
+}
+
+/* Применяем стили к различным элементам интерфейса с эффектом размытия */
+.headerTabs,
+.headerRight,
+.dialog,
+.raised,
+.fab,
+.paper-icon-button-light:not(
+    .headerRight,
+    .headerRight .paper-icon-button-light
+),
+.osdHeader .headerLeft .paper-icon-button-light,
+.detailButton,
+.sliderBubble,
+.MuiDataGrid-root,
+.MuiMenu-list,
+.MuiButton-root,
+.toast.toastVisible,
+.guide-date-tab-button.emby-tab-button-active,
+.guide-date-tab-button:focus,
+.MuiTabs-centered .MuiTab-root,
+#skipIntro .emby-button,
+.chapterThumbContainer,
+.chapterThumbTextContainer {
+    color: var(--theme-text-colour);
+    border-radius: var(--theme-roundness);
+    box-shadow: inset 0 1px var(--theme-menu-shadow-colour);
+    background-color: var(--theme-menu-background-colour);
+    backdrop-filter: blur(var(--theme-blur)) !important;
+    -webkit-backdrop-filter: blur(var(--theme-blur)) !important;
+    -moz-backdrop-filter: blur(var(--theme-blur)) !important;
+    -o-backdrop-filter: blur(var(--theme-blur)) !important;
+    -ms-backdrop-filter: blur(var(--theme-blur)) !important;
+}
+
+/* Устанавливаем цвет фона для диалогового фона */
+.dialogBackdrop {
+    background-color: #111;
+}
+
+/* Выравниваем элементы слайдера по центру */
+.headerTabs .emby-tabs-slider {
+    display: flex;
+    align-items: center;
+}
+
+/* Только для вкладок */
+.headerTabs .emby-tab-button {
+    padding: 1.112em !important;  /* Увеличено в 2 раза */
+    margin: 0 .29em !important;
+}
+
+/* Настраиваем отступы и закругление для кнопок и вкладок */
+.headerRight .paper-icon-button-light,
+.detailButton,
+.sessionCardButton,
+.guideOptions,
+.MuiTabs-centered .MuiTab-root {
+    padding: 0.556em !important;
+    margin: 0 .29em !important;
+    border-radius: var(--theme-roundness);
+}
+
+/* Устанавливаем высоту для элементов заголовка на десктопе */
+.layout-desktop .headerTabs,
+.layout-desktop .headerLeft,
+.layout-desktop .headerRight,
+.layout-desktop .emby-tabs-slider,
+.layout-desktop .raised {
+    height: 50px;
+}
+
+/* Устанавливаем высоту для элементов заголовка на мобильных устройствах */
+.layout-mobile .headerTabs,
+.layout-mobile .headerRight,
+.layout-mobile .emby-tabs-slider,
+.layout-mobile .raised {
+    height: 40px;
+}
+
+/* Настраиваем отступ слева для вкладок на десктопе */
+.layout-desktop .headerTabs {
+    margin-left: 250px;
+}
+
+/* Медиа-запрос для экранов шириной до 1599px */
+@media (max-width: 1599px) {
+    /* Настраиваем ширину и отступ для секции вкладок */
+    .layout-desktop .sectionTabs {
+        width: auto;
+        align-self: center;
+        margin-top: -58px;
+    }
+
+    /* Настраиваем отступ справа для правой части заголовка */
+    .layout-desktop .headerRight {
+        margin-right: .8em;
+    }
+
+    /* Настраиваем отступы для вкладок на мобильных устройствах */
+    .layout-mobile .headerTabs {
+        margin: 20px auto;
+        width: auto;
+    }
+
+    /* Настраиваем высоту заголовка с логотипом на мобильных устройствах */
+    .layout-mobile .pageTitleWithLogo {
+        height: 40px;
+    }
+}
+
+/* Настраиваем ширину для секции вкладок на TV */
+.layout-tv .sectionTabs {
+    width: unset;
+}
+
+/* Медиа-запрос для экранов шириной от 100em */
+@media (min-width: 100em) {
+    /* Сбрасываем отступ сверху для вкладок на TV */
+    .layout-tv .headerTabs {
+        margin-top: unset;
+    }
+
+    /* Настраиваем отступ сверху для вкладок на мобильных устройствах */
+    .layout-mobile .headerTabs {
+        margin-top: -1.3em;
+    }
+}
+
+/* Медиа-запрос для экранов шириной до 100em */
+@media (max-width: 100em) {
+    /* Настраиваем ширину и размер шрифта для секции вкладок на TV */
+    .layout-tv .sectionTabs {
+        width: fit-content;
+        align-self: center;
+        font-size: 125%;
+    }
+}
+
+/* Медиа-запрос для экранов шириной до 50em */
+@media (max-width: 50em) {
+    /* Делаем кнопку домашней библиотеки на всю ширину */
+    .homeLibraryButton {
+    width: 100% !important;
+    }
+}
+
+/* ========================================
+   МОДУЛЬ: STATIC SIDEBAR
+   ======================================== */
+
+/* Делаем боковую панель статичной на десктопе */
+.layout-desktop .mainDrawer,
+.MuiDrawer-paperAnchorLeft {
+    left: 0 !important;
+    top: 0;
+    width: 250px !important;
+    background-color: var(--theme-sidebar-background-colour) !important;
+    z-index: 100;
+}
+
+/* Скрываем кнопку меню и кнопку домой на десктопе */
+.layout-desktop .mainDrawerButton,
+.layout-desktop .headerHomeButton {
+    display: none;
+}
+
+/* Настраиваем отступы для страниц библиотеки на десктопе */
+.layout-desktop .libraryPage:not(#editItemMetadataPage) {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+}
+
+/* Настраиваем отступы для контейнера слайдов на десктопе */
+.layout-desktop #slides-container {
+    margin-left: 320px;
+    width: calc(100% - 385px);
+}
+
+/* Скрываем боковую панель в определённых режимах */
+.layout-desktop .hide-scroll .mainDrawer,
+.layout-desktop .hideMainDrawer .mainDrawer {
+    display: none;
+}
+
+/* ========================================
+   БАЗОВЫЕ СТИЛИ: БОКОВАЯ ПАНЕЛЬ
+   ======================================== */
+
+/* Убираем анимацию перехода на десктопе */
+.layout-desktop,
+.touch-menu-la.transition {
+    transition: none;
+}
+
+/* Настраиваем отступ сверху для боковой панели на мобильных устройствах */
+.layout-mobile .mainDrawer {
+    padding-top: 1.2em;
+}
+
+/* Настраиваем отступ сверху для контейнера прокрутки на десктопе */
+.layout-desktop .mainDrawer-scrollContainer {
+    margin-top: 100px;
+}
+
+/* Настраиваем стиль для пунктов меню боковой панели */
+.navMenuOption,
+.navMenuOption-selected,
+.navMenuOption:hover,
+.MuiListItem-root,
+.MuiDrawer-paperAnchorLeft .MuiButtonBase-root {
+    border-radius: var(--theme-roundness) !important;
+    width: 80%;
+    margin: auto !important;
+}
+
+/* Настраиваем эффект наведения для пунктов меню */
+.navMenuOption:hover,
+.listItem:hover,
+.MuiButton-root:hover {
+    background-color: var(--theme-menu-shadow-colour);
+}
+
+/* Настраиваем стиль для выбранного пункта меню */
+.navMenuOption-selected,
+.Mui-selected {
+    background: var(--theme-menu-shadow-colour) !important;
+}
+
+/* ========================================
+   БАЗОВЫЕ СТИЛИ: КАРТОЧКИ
+   ======================================== */
+
+/* Настраиваем отступ для заголовка первой секции */
+.section0 .sectionTitle {
+    padding-top: 1em !important;
+}
+
+/* Сбрасываем отступ сверху для кнопок прокрутки */
+.layout-desktop .section0 .emby-scrollbuttons,
+.layout-desktop .section1 .emby-scrollbuttons {
+    padding-top: unset;
+}
+
+/* Настраиваем скругление и тень для карточек и диалогов */
+.cardContent:not(.dashboardSection .cardContent),
+.cardPadder:not(.dashboardSection .cardPadder),
+.blurhash-canvas,
+.dialog,
+.itemSelectionPanel {
+    border-radius: var(--theme-roundness) !important;
+    box-shadow: inset 0 1px var(--theme-menu-shadow-colour) !important;
+    transition: 0.2s;
+}
+
+/* Настраиваем скругление и тень для контейнера оверлея карточек */
+.cardOverlayContainer {
+    border-radius: var(--theme-roundness) !important;
+    box-shadow: inset 0 2px var(--theme-menu-shadow-colour) !important;
+    transition: unset;
+}
+
+/* Настраиваем отступы для кнопок оверлея на мобильных устройствах */
+.layout-mobile .cardOverlayButton {
+    padding: unset;
+    margin: 5px;
+}
+
+/* Убираем фон для иконок кнопок оверлея на мобильных устройствах */
+.layout-mobile .cardOverlayButtonIcon {
+    background: unset !important;
+}
+
+/* Настраиваем отступы для кнопок оверлея на десктопе */
+.layout-desktop .cardOverlayContainer > .cardOverlayButton-br .cardOverlayButton {
+    padding: unset;
+    margin: 5px;
+}
+
+/* Настраиваем фон для стандартных фонов карточек */
+.defaultCardBackground1,
+.defaultCardBackground2,
+.defaultCardBackground3,
+.defaultCardBackground4,
+.defaultCardBackground5,
+.cardOverlayContainer > .cardOverlayFab-primary {
+    background-color: var(--theme-menu-background-colour);
+    font-size: 110%;
+}
+
+/* Настраиваем эффект фокуса и наведения для кнопок */
+.button-submit:focus,
+.paper-icon-button-light:hover:not(:disabled, .btnDelete),
+.raised:hover,
+.emby-tab-button:hover,
+.detailButton:hover,
+.emby-tab-button.show-focus:focus,
+.paper-icon-button-light.show-focus:focus,
+.emby-button.show-focus:focus,
+.alphaPickerButton-tv:focus,
+#skipIntro .emby-button:hover,
+.multiSelectCheckboxOutline {
+    border-radius: var(--theme-roundness) !important;
+    transform: unset !important;
+    -webkit-transform: unset !important;
+    -moz-transform: unset !important;
+    -o-transform: unset !important;
+    -ms-transform: unset !important;
+    color: var(--theme-text-colour);
+    background-color: var(--theme-menu-shadow-colour) !important;
+}
+
+/* Настраиваем отступы для кнопок в деталях на TV */
+.layout-tv .itemDetailsGroup .emby-button.show-focus:focus {
+    padding: 5px 10px;
+}
+
+/* ========================================
+   МОДУЛЬ: MOVING CARDS
+   ======================================== */
+
+/* Добавляем эффект подъёма карточек при наведении */
+.cardBox:hover {
+    transform: translateY(-2.5px);
+    -webkit-transform: translateY(-2.5px);
+    -moz-transform: translateY(-2.5px);
+    -ms-transform: translateY(-2.5px);
+    -o-transform: translateY(-2.5px);
+}
+
+/* ========================================
+   БАЗОВЫЕ СТИЛИ: НАСТРОЙКИ ПОЛЬЗОВАТЕЛЯ
+   ======================================== */
+
+/* Делаем заголовки жирными */
+.readOnlyContent h2,
+.sectionTitle,
+.dashboardSection h3,
+.MuiListSubheader-root {
+    font-weight: bold;
+}
+
+/* Убираем границы для элементов списка */
+.listItem-border,
+.itemSelectionPanel {
+    border: unset;
+}
+
+/* Настраиваем отступ слева для элементов списка */
+.listItem {
+    padding-left: 1.2em !important;
+}
+
+/* Настраиваем скругление для элементов списка и кнопок */
+.listItem:hover,
+.MuiButtonBase-root,
+.MuiButtonBase-root:hover,
+.emby-tab-button,
+progress {
+    border-radius: var(--theme-roundness);
+}
+
+/* Настраиваем фон и стиль для визуальных карточек */
+.visualCardBox {
+    background-color: transparent;
+    border-radius: var(--theme-roundness);
+    box-shadow: inset 0 1px var(--theme-menu-shadow-colour);
+    border: unset;
+    padding: 10px;
+}
+
+/* Настраиваем фон и стиль для контейнеров и полей ввода */
+.collapseContent,
+.formDialogFooter:not(.formDialogFooter-clear),
+.formDialogHeader:not(.formDialogHeader-clear),
+.paperList,
+.emby-select-withcolor,
+.emby-input,
+.emby-textarea {
+    background-color: var(--theme-menu-background-colour);
+    border-radius: var(--theme-roundness);
+    box-shadow: inset 0 1px var(--theme-menu-shadow-colour);
+    border: unset;
+    padding: 10px;
+}
+
+/* Убираем тень для отключённого select */
+.emby-select[disabled] {
+    box-shadow: unset;
+}
+
+/* Настраиваем отступы для select выбора треков */
+.trackSelections .selectContainer .detailTrackSelect {
+    padding: 0 10px;
+}
+
+/* ========================================
+   БАЗОВЫЕ СТИЛИ: ДЕТАЛИ КОНТЕНТА
+   ======================================== */
+
+/* Настраиваем размер и позицию изображения карточки на десктопе */
+.layout-desktop .detailImageContainer .card {
+    width: 250px;
+    max-width: unset;
+    top: 1.5em;
+    left: 0;
+}
+
+/* Обратная совместимость для версий до 10.11.0 */
+.layout-desktop .infoWrapper .detailImageContainer .card {
+    padding-top: 8.5em;
+}
+
+/* Настраиваем отступы для основного контента деталей на десктопе */
+.layout-desktop .detailPagePrimaryContent {
+    padding-top: 165px;
+    padding-left: 300px;
+    min-height: 325px;
+}
+
+/* Настраиваем позицию основных кнопок деталей на десктопе */
+.layout-desktop .mainDetailButtons {
+    margin-top: 350px;
+    margin-left: 292px;
+    position: absolute;
+}
+
+/* Настраиваем отображение основных кнопок деталей на мобильных устройствах */
+.layout-mobile .mainDetailButtons {
+    display: flex;
+    flex-flow: wrap;
+    gap: 10px;
+}
+
+/* Настраиваем стиль кнопок деталей */
+.mainDetailButtons .detailButton {
+    display: inline-flex;
+    align-items: center;
+    padding-left: 50px;
+    position: relative;
+}
+
+/* Добавляем текстовые метки для кнопок */
+.btnPlay .detailButton-content:before {
+    content: "Play";
+}
+
+.btnReplay .detailButton-content:before {
+    content: "Replay";
+}
+
+.btnDownload .detailButton-content:before {
+    content: "Download";
+}
+
+.btnPlayTrailer .detailButton-content:before {
+    content: "Trailer";
+}
+
+.btnInstantMix .detailButton-content:before {
+    content: "Instant Mix";
+}
+
+.btnShuffle .detailButton-content:before {
+    content: "Shuffle";
+}
+
+.btnCancelSeriesTimer .detailButton-content:before {
+    content: "Cancel Programme";
+}
+
+.btnCancelTimer .detailButton-content:before {
+    content: "Stop Recording";
+}
+
+.btnPlaystate .detailButton-content:before {
+    content: "Watched";
+}
+
+.btnUserRating .detailButton-content:before {
+    content: "Favourite";
+}
+
+.btnSplitVersions .detailButton-content:before {
+    content: "Split Versions";
+}
+
+.btnMoreCommands .detailButton-content:before {
+    content: "Options";
+}
+
+/* Настраиваем позицию текстовых меток */
+.detailButton-content:before {
+    position: relative;
+    margin-left: 30px;
+}
+
+/* Настраиваем позицию иконок */
+.detailButton-icon:before {
+    position: absolute;
+    top: 7px;
+    left: 7px;
+}
+
+/* Сбрасываем высоту для material-icons */
+.mainDetailButtons .material-icons {
+    height: unset;
+}
+
+/* Настраиваем отступы для контейнеров деталей на десктопе */
+.layout-desktop .detailPagePrimaryContainer,
+.layout-desktop .detailPageContent {
+    padding-left: 3.3% !important;
+}
+
+/* Убираем фон для ленты деталей */
+.detailRibbon {
+    background: unset;
+    padding-left: 0 !important;
+}
+
+/* Настраиваем отступы для info-обёртки на десктопе */
+.layout-desktop .infoWrapper {
+    padding-top: 180px;
+    padding-left: 300px;
+}
+
+/* Добавляем градиент к заднему фону */
+.itemBackdrop::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, transparent 5%, var(--theme-background-colour));
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Настраиваем анимацию и отступы для заднего фона на мобильных устройствах */
+.layout-mobile .itemBackdrop {
+    margin-top: unset;
+    -webkit-animation: backdrop-fadein .8s ease-in normal both;
+    animation: backdrop-fadein .8s ease-in normal both;
+}
+
+/* Убираем фильтры для изображения карточки на мобильных устройствах */
+.layout-mobile .detailImageContainer .card {
+    filter: unset;
+    -webkit-filter: unset;
+    -moz-filter: unset;
+    -o-filter: unset;
+    -ms-filter: unset;
+    padding-left: 2em;
+}
+
+/* Настраиваем позицию логотипа на десктопе */
+.layout-desktop .detailLogo {
+    left: 3%;
+    right: unset;
+    z-index: 1;
+}
+
+/* Убираем фон и тень для элементов Material UI */
+.layout-desktop .backgroundContainer.withBackdrop,
+.MuiPaper-root,
+.MuiTabs-indicator {
+    background-color: unset;
+    background-image: unset;
+    box-shadow: unset;
+}
+
+/* Применяем размытие к заднему фону на десктопе */
+.layout-desktop .backdropImage {
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+}
+
+/* Настраиваем эффект затемнения контента */
+.darkenContent {
+    backdrop-filter: blur(5px) brightness(0.75);
+    -webkit-backdrop-filter: blur(5px) brightness(0.75);
+    -moz-backdrop-filter: blur(5px) brightness(0.75);
+    -o-backdrop-filter: blur(5px) brightness(0.75);
+    -ms-backdrop-filter: blur(5px) brightness(0.75);
+    background: -webkit-linear-gradient(180deg, transparent, var(--theme-background-colour));
+    background: -moz-linear-gradient(180deg, transparent, var(--theme-background-colour));
+    background: -o-linear-gradient(180deg, transparent, var(--theme-background-colour));
+    background: -ms-linear-gradient(180deg, transparent, var(--theme-background-colour));
+    background: linear-gradient(180deg, transparent, var(--theme-background-colour));
+}
+
+/* Настраиваем отступ для контейнера TV */
+.itemsContainer-tv {
+    margin-left: 10px;
+}
+
+/* ========================================
+   БАЗОВЫЕ СТИЛИ: АДМИН-НАСТРОЙКИ
+   ======================================== */
+
+/* Настраиваем цвет кнопки перезапуска сервера */
+#btnRestartServer {
+    box-shadow: inset 0 1px var(--theme-restart-colour) !important;
+}
+
+/* Настраиваем эффект наведения для кнопки перезапуска и уведомлений */
+#btnRestartServer:hover,
+.notifications,
+.MuiChip-filledInfo {
+    color: var(--theme-text-colour) !important;
+    background-color: var(--theme-restart-colour) !important;
+}
+
+/* Настраиваем цвет кнопки выключения и удаления */
+#btnShutdown,
+.btnDelete {
+    box-shadow: inset 0 1px var(--theme-shutdown-colour) !important;
+}
+
+/* Настраиваем эффект наведения для кнопки выключения и важных уведомлений */
+#btnShutdown:hover,
+.btnDelete:hover,
+.notification_important,
+.MuiChip-filledError {
+    color: var(--theme-text-colour) !important;
+    background-color: var(--theme-shutdown-colour) !important;
+}
+
+/* Настраиваем скругление для иконок элементов списка */
+.listItemIcon:not(.listItemIcon-transparent) {
+    border-radius: var(--theme-roundness);
+}
+
+/* Настраиваем отступы для кнопок карточки сессии */
+.sessionCardButtons {
+    margin: .29em 0;
+}
+
+/* Настраиваем скругление для контента карточек в дашборде */
+.dashboardSection .cardContent {
+    border-top-left-radius: var(--theme-roundness);
+    border-top-right-radius: var(--theme-roundness);
+}
+
+/* Настраиваем скругление для первой кнопки в группе */
+div[data-role="controlgroup"] a[data-role="button"]:first-child {
+    border-bottom-left-radius: var(--theme-roundness);
+    border-top-left-radius: var(--theme-roundness);
+}
+
+/* Настраиваем скругление для последней кнопки в группе */
+div[data-role="controlgroup"] a[data-role="button"]:last-child {
+    border-bottom-right-radius: var(--theme-roundness);
+    border-top-right-radius: var(--theme-roundness);
+}
+
+/* Настраиваем поведение колонок дашборда */
+.dashboardColumn {
+    flex-shrink: inherit;
+}
+
+/* ========================================
+   БАЗОВЫЕ СТИЛИ: БАЗОВЫЕ ЦВЕТА
+   ======================================== */
+
+/* Настраиваем цвет для фокусированных элементов */
+.selectLabelFocused,
+.textareaLabelFocused,
+.inputLabelFocused,
+.mdl-slider,
+.metadataSidebarIcon,
+.button-link,
+.guide-date-tab-button.emby-tab-button-active,
+.guide-date-tab-button:focus,
+#divRunningTasks span,
+.MuiAlert-icon,
+.listItemBodyText span {
+    color: var(--theme-text-colour) !important;
+}
+
+/* Настраиваем фон для отмеченных чекбоксов и других элементов */
+.emby-checkbox:checked + span + .checkboxOutline,
+.listItemIcon:not(
+    .listItemIcon-transparent,
+    .notification_important,
+    .notifications
+),
+.guide-channelHeaderCell:focus,
+.programCell:focus,
+.emby-button.show-focus:focus,
+::selection,
+div[data-role="controlgroup"] a.ui-btn-active,
+.MuiAvatar-root,
+.selectionCommandsPanel {
+    background-color: var(--theme-base-colour) !important;
+}
+
+/* Настраиваем цвет границ для чекбоксов */
+.emby-checkbox + span + .checkboxOutline,
+.emby-checkbox:checked + span + .checkboxOutline,
+.emby-checkbox:focus:not(:checked) + span + .checkboxOutline,
+.mdl-spinner__layer-1,
+.mdl-spinner__layer-2,
+.mdl-spinner__layer-3,
+.mdl-spinner__layer-4 {
+    border-color: var(--theme-base-colour) !important;
+}
+
+/* Настраиваем внешний вид слайдера */
+.mdl-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    background: transparent;
+}
+
+/* Убираем стандартный ползунок для WebKit */
+.mdl-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 0;
+    height: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+/* Убираем стандартный ползунок для Firefox */
+.mdl-slider::-moz-range-thumb {
+    width: 0;
+    height: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+/* Убираем стандартный ползунок для IE/Edge */
+.mdl-slider::-ms-thumb {
+    width: 0;
+    height: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+/* Настраиваем фон слайдера */
+.mdl-slider-background-flex,
+.mdl-slider-background-lower,
+.mdl-slider-background-upper {
+    border-radius: var(--theme-roundness);
+    box-shadow: inset 0 1px var(--theme-menu-shadow-colour);
+    height: 10px;
+}
+
+/* ========================================
+   МАРКЕРЫ ГЛАВ
+   ======================================== */
+
+/* Настраиваем контейнер для маркеров глав */
+.sliderMarkerContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Настраиваем стиль маркеров глав */
+.sliderMarker {
+    position: absolute;
+    top: 0;
+    width: 2px;
+    height: 10px;
+    background-color: var(--theme-chapter-marker-colour);
+    opacity: 0.6;
+    border-radius: 1px;
+    pointer-events: auto;
+    cursor: pointer;
+    transition: opacity 0.2s ease, width 0.2s ease, background-color 0.2s ease;
+}
+
+/* Настраиваем цвет для непросмотренных маркеров */
+.sliderMarker.unwatched {
+    background-color: var(--theme-chapter-marker-colour);
+}
+
+/* Настраиваем цвет для просмотренных маркеров */
+.sliderMarker.watched {
+    background-color: var(--theme-chapter-marker-watched-colour);
+}
+
+/* Настраиваем отступ для верхней части слайдера */
+.mdl-slider-background-upper {
+    margin-left:  -3px;
+}
+
+/* Настраиваем позицию контейнера фона слайдера */
+.mdl-slider-background-flex-container {
+    top: 5px;
+}
+
+/* ========================================
+   ПРОГРЕСС-БАРЫ
+   ======================================== */
+
+/* Настраиваем цвет для переднего плана прогресс-бара */
+.itemProgressBarForeground,
+.playbackProgress > div,
+.mdl-slider-background-lower,
+.iconOsdProgressInner,
+.taskProgressInner,
+progress {
+    background-color: var(--theme-progress-bar-colour) !important;
+}
+
+/* Совместимость с браузерами для прогресс-бара */
+progress::-moz-progress-bar {
+    background-color: var(--theme-progress-bar-colour);
+}
+progress::-webkit-progress-bar {
+    background-color: var(--theme-progress-bar-colour);
+}
+progress::-ms-thumb {
+    background-color: var(--theme-progress-bar-colour);
+}
+
+/* Настраиваем цвет для прогресса транскодирования */
+.transcodingProgress > div {
+    background-color: var(--theme-progress-bar-transcoding-colour) !important;
+}
+
+/* Настраиваем цвет фона для прогресс-бара */
+.innerCardFooter .itemProgressBar,
+.backgroundProgress > div,
+.mdl-slider-background-flex,
+.taskProgressOuter,
+progress {
+    background-color: var(--theme-progress-bar-background-colour) !important;
+}
+
+/* ========================================
+   МОДУЛЬ: FLOATING PROGRESS
+   ======================================== */
+
+/* Определяем переменные для плавающего прогресса */
+:root {
+    --floating-progress-roundness: .75rem;
+    --floating-progress-height: 10px;
+}
+
+/* Настраиваем отступ снизу для деталей текущего воспроизведения */
+.sessionNowPlayingDetails {
+    padding-bottom: 10px;
+}
+
+/* Делаем прогресс-бары плавающими с закруглёнными углами */
+.fullInnerCardFooter,
+.activeSession .backgroundProgress,
+.activeSession .playbackProgress,
+.activeSession .transcodingProgress {
+    width: 95%;
+    bottom: 10px;
+    margin: 0 auto;
+    height: var(--floating-progress-height);
+    border-radius: var(--floating-progress-roundness) !important;
+    -webkit-border-radius: var(--floating-progress-roundness) !important;
+    -moz-border-radius: var(--floating-progress-roundness) !important;
+}
+
+/* Настраиваем высоту и тень для прогресс-бара */
+.itemProgressBar {
+    height: var(--floating-progress-height);
+    box-shadow: inset 0 1px var(--theme-menu-shadow-colour);
+    -webkit-box-shadow: inset 0 1px var(--theme-menu-shadow-colour);
+    -moz-box-shadow: inset 0 1px var(--theme-menu-shadow-colour);
+}
+
+/* Настраиваем тень для элементов прогресса */
+.playbackProgress > div,
+.backgroundProgress > div,
+.transcodingProgress > div {
+    box-shadow: inset 0 1px var(--theme-menu-shadow-colour);
+    -webkit-box-shadow: inset 0 1px var(--theme-menu-shadow-colour);
+    -moz-box-shadow: inset 0 1px var(--theme-menu-shadow-colour);
+    border-radius: var(--floating-progress-roundness);
+    -webkit-border-radius: var(--floating-progress-roundness);
+    -moz-border-radius: var(--floating-progress-roundness);
+}
+
+/* ========================================
+   БАЗОВЫЕ СТИЛИ: ДОПОЛНИТЕЛЬНО
+   ======================================== */
+
+/* Настраиваем отступы для контента документа дашборда */
+.layout-desktop .dashboardDocument .content-primary:not(.layout-desktop #dashboardPage .content-primary) {
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+}
+
+/* Сбрасываем отступ для заголовка диалога */
+[dir="ltr"] .formDialogHeaderTitle:first-child {
+    margin-left: unset;
+}
+
+/* ========================================
+   ФОРМА ВХОДА
+   ======================================== */
+
+/* Настраиваем стиль страницы входа */
+#loginPage {
+    background-color: var(--theme-menu-background-colour);
+    border-radius: var(--theme-roundness);
+    box-shadow: inset 0 1px var(--theme-menu-shadow-colour);
+    padding: unset !important;
+    max-width: 750px;
+    max-height: 500px;
+    margin: 150px auto 0;
+}
+
+/* Настраиваем отступ для кнопки отправки формы */
+.manualLoginForm .raised.button-submit.block.emby-button {
+    margin-bottom: -3px;
+}
+
+/* ========================================
+   МОДУЛЬ: FORGOT PASSWORD
+   ======================================== */
+
+/* Скрываем кнопку сброса пароля и "Забыли пароль" */
+#btnResetPassword,
+.btnForgotPassword {
+    display: none !important;
+}
+
+/* Настраиваем максимальную высоту страницы входа */
+#loginPage {
+    max-height: 450px;
+}
+
+/* ========================================
+   МОДУЛЬ: HIDE MY MEDIA
+   ======================================== */
+
+/* Скрываем заголовок секции "Мои медиа" */
+#indexPage .section0 .sectionTitle {
+    display: none;
+}
+
+/* Настраиваем отступ сверху для первой секции */
+#indexPage .section0 {
+    padding-top: 1em;
+}
+
+/* Настраиваем отступ сверху для вертикальной секции */
+#indexPage .verticalSection.section0 {
+    padding-top: 3em;
+}
+
+/* ========================================
+   МОДУЛЬ: CENTRAL LIBRARIES SMALL
+   ======================================== */
+
+/* Центрируем секцию "Мои медиа (small)" на главной странице */
+#indexPage .section0 .itemsContainer.padded-left.padded-right {
+    justify-content: center !important;
+    padding-top: 15px !important;
+}
+
+/* ========================================
+   МОДУЛЬ: SMALLER CAST
+   ======================================== */
+
+/* Делаем карточки актёров меньше */
+#castContent .card.overflowPortraitCard.personCard.card-hoverable.card-withuserdata {
+    width: 4.2cm;
+    font-size: 90%;
+}
+
+/* Настраиваем размер фона для карточек актёров */
+#castContent .cardContent-button.cardImageContainer.coveredImage.cardContent.cardContent-shadow.itemAction.lazy {
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+#castContent .cardContent-button.cardImageContainer.coveredImage.defaultCardBackground.defaultCardBackground1.cardContent.cardContent-shadow.itemAction {
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+#castContent .cardContent-button.cardImageContainer.coveredImage.defaultCardBackground.defaultCardBackground2.cardContent.cardContent-shadow.itemAction {
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+#castContent .cardContent-button.cardImageContainer.coveredImage.defaultCardBackground.defaultCardBackground3.cardContent.cardContent-shadow.itemAction {
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+#castContent .cardContent-button.cardImageContainer.coveredImage.defaultCardBackground.defaultCardBackground4.cardContent.cardContent-shadow.itemAction {
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+#castContent .cardContent-button.cardImageContainer.coveredImage.defaultCardBackground.defaultCardBackground5.cardContent.cardContent-shadow.itemAction {
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+/* Настраиваем размер масштабируемой части карточки актёра */
+#castContent .cardScalable {
+    width: 3.8cm;
+    height: 3.8cm;
+}
+
+/* Настраиваем позицию кнопок оверлея */
+#castContent .cardOverlayButton-br {
+    bottom: 4%;
+    right: 15%;
+    width: 70%;
+}
+
+/* Настраиваем отступ для кнопок оверлея */
+#castContent .cardOverlayButton.cardOverlayButton-hover.itemAction.paper-icon-button-light {
+    margin: auto;
+}
+
+/* Убираем фон для padders карточек актёров */
+#castContent .cardBox:not(.visualCardBox) .cardPadder {
+    background-color: unset;
+}
+
+/* Убираем тень для padders и контента карточек актёров */
+#castContent .cardBox:not(.visualCardBox) .cardPadder,
+#castContent .cardContent-shadow {
+    box-shadow: unset;
+}
+
+/* ========================================
+   ГЛАВЫ
+   ======================================== */
+
+/* Настраиваем ширину контейнера текста главы */
+.chapterThumbTextContainer {
+    width: fit-content;
+    margin: auto;
+}
+
+/* Настраиваем ширину текста главы */
+.chapterThumbText {
+    width: fit-content;
+}

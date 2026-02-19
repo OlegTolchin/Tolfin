@@ -13,13 +13,13 @@ This project uses Gitea API for loading CSS files to bypass browser ORB restrict
 1. Go to Jellyfin Dashboard → General → Custom CSS
 2. Paste this code:
    ```css
-   @import url("https://git.tolchin.pro/Oleg/Tolfin/raw/branch/main/theme/complete.css");
+   @import url("https://git.tolchin.pro/Oleg/Tolfin/raw/branch/union/tolfin.css");
    ```
 3. Click Save
 
 ### Manual Installation
 
-1. Download `theme/complete.css` from this repository
+1. Download `theme/tolfin.css` from this repository
 2. Go to Jellyfin Dashboard → General → Custom CSS
 3. Paste the contents of the file
 4. Click Save
