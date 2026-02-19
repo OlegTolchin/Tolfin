@@ -23,7 +23,7 @@ This project was created to experiment with CSS settings and correct visual flaw
 
 ### Manual Installation
 
-1. Download `theme/tolfin.css` from this repository
+1. Download `tolfin.css` from this repository
 2. Go to Jellyfin Dashboard → General → Custom CSS
 3. Paste the contents of the file
 4. Click Save
