@@ -16,6 +16,7 @@ This project was created to experiment with CSS settings and correct visual flaw
 
 1. Go to Jellyfin Dashboard → General → Custom CSS
 2. Paste this code:
+   
    ```css
    @import url("https://git.tolchin.pro/Oleg/Tolfin/raw/branch/main/tolfin.css");
    ```
